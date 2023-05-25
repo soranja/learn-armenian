@@ -1,0 +1,104 @@
+.Vocabulary {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(vocabulary-eich.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vocabInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-translate {
+  padding: 5px 10px 5px 10px;
+  background-color: rgb(245, 221, 244);
+  border-radius: 5px;
+}
+
+.msg-validation {
+  margin: 0 10px 0 10px;
+  padding: 15px 15px 15px 15px;
+  font-size: 20px;
+
+  border-radius: 5px;
+  color: red;
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+}
+
+.vocabSearch {
+  margin: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  width: 250px;
+  outline: none;
+}
+
+.hy-translation {
+  margin: 10px 0px 20px 0px;
+  padding-left: 2px;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  color: rgb(255, 235, 56);
+}
+
+.wordlist-title {
+  margin: 10px 0px 20px 0px;
+  padding-left: 2px;
+}
+
+.wordlist {
+  list-style-type: none;
+  margin: 0px 10px 20px 10px;
+  padding: 0;
+}
+
+.wordlist li {
+  font-style: italic;
+}
+
+.wordlist button {
+  border: none;
+  border-radius: 30px;
+  margin: 0px 10px 0px 10px;
+  font-size: 14px;
+  padding: 5px;
+  background-color: rgb(255, 135, 135);
+  color: rgb(0, 0, 0);
+}
+
+.removeWordlist {
+  border: none;
+  border-radius: 30px;
+  margin: 0px 10px 0px 10px;
+  padding: 5px 10px 5px 10px;
+  font-size: 14px;
+  background-color: rgb(255, 135, 135);
+  color: rgb(0, 0, 0);
+}
+
+/* ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+
+.ResetCount {
+  margin: 15px 0 15px 0;
+} */

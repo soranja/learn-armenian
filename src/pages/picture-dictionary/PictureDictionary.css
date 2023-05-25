@@ -1,0 +1,22 @@
+.PictureDictionary {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.card {
+  margin-right: 10px;
+  width: 400px;
+}
+
+.card-img-top {
+}
+
+.card-title {
+  text-align: center;
+  font-size: 24px;
+}
+.card-text {
+  font-size: 14px;
+  text-align: center;
+}
