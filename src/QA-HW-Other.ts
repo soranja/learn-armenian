@@ -12,7 +12,8 @@ Homework:
 
 - add validation ('You already have this word') - working on it
 - review localStorage
-- move all essential data to an .env file
+- move all essential data to an .env file - got it
+- add / fix / improve CSS
 
 */
 
@@ -38,4 +39,4 @@ Other:
 
 */
 
-// export default {};
+export default {};

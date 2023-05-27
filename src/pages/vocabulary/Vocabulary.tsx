@@ -11,6 +11,9 @@ function Vocabulary() {
   const [isError, setError] = useState(false);
   const [wordlist, setWordlist] = useState<wordlist>([]);
 
+  const AUTH = process.env.REACT_APP_AUTH;
+  const PROJECT = process.env.REACT_APP_PROJECT;
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.length === 10) {
       setError(true);
@@ -42,10 +45,11 @@ function Vocabulary() {
           JSON.stringify({ q: `${vocabInput}`, source: "en", target: "hy" }),
           {
             headers: {
-              Authorization: "Bearer here is the token",
-              // gcloud auth application-default print-access-token
-              "x-goog-user-project": "",
+              Authorization: `${AUTH}`,
+              "x-goog-user-project": `${PROJECT}`,
               "Content-Type": "application/json; charset=utf-8",
+
+              //gcloud auth application-default print-access-token
             },
           }
         )
