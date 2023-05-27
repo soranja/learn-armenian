@@ -2,15 +2,14 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import "./Vocabulary.css";
 import axios from "axios";
 import Loader from "../../components/loader/Loader";
+import { wordlist } from "../../types/vocabulary";
 
 function Vocabulary() {
   const [vocabTranslate, setVocabTranslate] = useState("");
   const [vocabInput, setVocabInput] = useState("");
   const [isLoader, setLoader] = useState(false);
   const [isError, setError] = useState(false);
-  const [wordlist, setWordlist] = useState<
-    { word: string; translation: string }[]
-  >([]);
+  const [wordlist, setWordlist] = useState<wordlist>([]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.value.length === 10) {
@@ -21,8 +20,20 @@ function Vocabulary() {
     setVocabInput(e.target.value);
   };
 
+  const updateWordlist = (updatedWordlist: wordlist) => {
+    localStorage.setItem("wordlist", JSON.stringify(updatedWordlist));
+    setWordlist(updatedWordlist);
+  };
+
+  useEffect(() => {
+    const locStorWordlist = JSON.parse(
+      localStorage.getItem("wordlist") || "[]"
+    );
+
+    setWordlist(locStorWordlist);
+  }, []);
+
   const handleClick = () => {
-    // console.log("enter");
     const translatedVocab = async () => {
       setLoader(true);
       await axios
@@ -31,7 +42,7 @@ function Vocabulary() {
           JSON.stringify({ q: `${vocabInput}`, source: "en", target: "hy" }),
           {
             headers: {
-              // Authorization: "Bearer Here is the TOKEN",
+              Authorization: "Bearer here is the token",
               // gcloud auth application-default print-access-token
               "x-goog-user-project": "",
               "Content-Type": "application/json; charset=utf-8",
@@ -41,17 +52,12 @@ function Vocabulary() {
         .then((response) => {
           const translation = response.data.data.translations[0].translatedText;
           setVocabTranslate(translation);
-          localStorage.setItem("vocabTranslate", JSON.stringify(translation));
-          setWordlist([{ word: vocabInput, translation }, ...wordlist]);
-
-          const isWordAlreadyExists = () => {
-            // wordlist.some(
-            //   (item) => item.word.toLowerCase() === vocabInput.toLowerCase()
-            // );
-            // console.log(1);
-          };
-          // console.log(isWordAlreadyExists());
-          // RETURNS UNDEFINED ?
+          const updatedWordList = [
+            { word: vocabInput, translation },
+            ...wordlist,
+          ];
+          setWordlist(updatedWordList);
+          updateWordlist(updatedWordList);
         })
         .catch((err) => console.error(`${err} 😯`))
         .finally(() => {
@@ -65,16 +71,9 @@ function Vocabulary() {
     const keyDownHandler = (e: KeyboardEvent) => {
       if (e.key === "Enter") {
         handleClick();
-        localStorage.setItem("vocabInput", JSON.stringify(vocabInput));
         setVocabInput("");
-
-        // localStorage.getItem("vocabInput");
-        // localStorage.getItem("vocabTranslate");
-        // JSON.parse doesn't work with TS!!! ? :(((
       }
     };
-
-    // How to optimize it in one useEffect with acync / await?
 
     document.addEventListener("keydown", keyDownHandler);
 
@@ -84,18 +83,11 @@ function Vocabulary() {
   }, [vocabInput]);
 
   const removeWord = (word: string) => {
-    setWordlist((prevWordlist) =>
-      prevWordlist.filter((curWord) => curWord.word !== word)
-    );
-
-    // initial thought: setWordlist(() => {}) doesn't work (wrong syntax) and it's not really clear for me
-
-    // ChatGPT has helped me, it made some mistakes but I fixed it
+    updateWordlist(wordlist.filter((curWord) => curWord.word !== word));
   };
 
   const removeWordlist = () => {
-    setWordlist([]);
-    console.log(`the list is emplty`);
+    updateWordlist([]);
   };
 
   return (
@@ -146,12 +138,3 @@ function Vocabulary() {
 }
 
 export default Vocabulary;
-
-// delete input after enter - got it (myself)
-// removee an item form the list - got it (with ChatGPT's assistance)
-// remove the whole list - got it (myself)
-// add validation ('You already have this word') - working on it
-// learn more about localStorage
-
-//localStorage
-// const [items, setItems] = useState([""]);
