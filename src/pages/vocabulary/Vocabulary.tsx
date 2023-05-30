@@ -10,6 +10,7 @@ function Vocabulary() {
   const [isLoader, setLoader] = useState(false);
   const [isError, setError] = useState(false);
   const [wordlist, setWordlist] = useState<wordlist>([]);
+  const [checkWord, setCheckWord] = useState(false);
 
   const AUTH = process.env.REACT_APP_AUTH;
   const PROJECT = process.env.REACT_APP_PROJECT;
@@ -21,54 +22,53 @@ function Vocabulary() {
     }
     setError(false);
     setVocabInput(e.target.value);
+
+    // console.log(wordlist.some((word) => word.word === vocabInput));
+    // console.log(checkWordlist());
+    // HERE IT'S FALSE AND DOESN'T WORK ?
+    // problems with understandding event loop / async / ...
   };
-
-  const updateWordlist = (updatedWordlist: wordlist) => {
-    localStorage.setItem("wordlist", JSON.stringify(updatedWordlist));
-    setWordlist(updatedWordlist);
-  };
-
-  useEffect(() => {
-    const locStorWordlist = JSON.parse(
-      localStorage.getItem("wordlist") || "[]"
-    );
-
-    setWordlist(locStorWordlist);
-  }, []);
 
   const handleClick = () => {
-    const translatedVocab = async () => {
-      setLoader(true);
-      await axios
-        .post(
-          "https://translation.googleapis.com/language/translate/v2",
-          JSON.stringify({ q: `${vocabInput}`, source: "en", target: "hy" }),
-          {
-            headers: {
-              Authorization: `${AUTH}`,
-              "x-goog-user-project": `${PROJECT}`,
-              "Content-Type": "application/json; charset=utf-8",
+    if (wordlist.some((word) => word.word === vocabInput) === true) {
+      setCheckWord(true);
+      return;
+    } else {
+      setCheckWord(false);
+      const translatedVocab = async () => {
+        setLoader(true);
+        await axios
+          .post(
+            "https://translation.googleapis.com/language/translate/v2",
+            JSON.stringify({ q: `${vocabInput}`, source: "en", target: "hy" }),
+            {
+              headers: {
+                Authorization: `${AUTH}`,
+                "x-goog-user-project": `${PROJECT}`,
+                "Content-Type": "application/json; charset=utf-8",
 
-              //gcloud auth application-default print-access-token
-            },
-          }
-        )
-        .then((response) => {
-          const translation = response.data.data.translations[0].translatedText;
-          setVocabTranslate(translation);
-          const updatedWordList = [
-            { word: vocabInput, translation },
-            ...wordlist,
-          ];
-          setWordlist(updatedWordList);
-          updateWordlist(updatedWordList);
-        })
-        .catch((err) => console.error(`${err} 😯`))
-        .finally(() => {
-          setLoader(false);
-        });
-    };
-    translatedVocab();
+                //gcloud auth application-default print-access-token
+              },
+            }
+          )
+          .then((response) => {
+            const translation =
+              response.data.data.translations[0].translatedText;
+            setVocabTranslate(translation);
+            const updatedWordList = [
+              { word: vocabInput, translation },
+              ...wordlist,
+            ];
+            setWordlist(updatedWordList);
+            updateWordlist(updatedWordList);
+          })
+          .catch((err) => console.error(`${err} 😯`))
+          .finally(() => {
+            setLoader(false);
+          });
+      };
+      translatedVocab();
+    }
   };
 
   useEffect(() => {
@@ -85,6 +85,21 @@ function Vocabulary() {
       document.removeEventListener("keydown", keyDownHandler);
     };
   }, [vocabInput]);
+
+  // WORDLIST FUNCTIONALITY: add / remove / localStorage
+
+  useEffect(() => {
+    const locStorWordlist = JSON.parse(
+      localStorage.getItem("wordlist") || "[]"
+    );
+
+    setWordlist(locStorWordlist);
+  }, []);
+
+  const updateWordlist = (updatedWordlist: wordlist) => {
+    localStorage.setItem("wordlist", JSON.stringify(updatedWordlist));
+    setWordlist(updatedWordlist);
+  };
 
   const removeWord = (word: string) => {
     updateWordlist(wordlist.filter((curWord) => curWord.word !== word));
@@ -137,6 +152,7 @@ function Vocabulary() {
           {wordlist.length >= 1 ? `CLEAR THE LIST` : ``}
         </button>
       </div>
+      {checkWord && `YOU HAVE THIS WORD ALREADY!`}
     </div>
   );
 }
