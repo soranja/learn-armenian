@@ -111,46 +111,52 @@ function Vocabulary() {
 
   return (
     <div className="Vocabulary">
-      <div className="vocabInput">
-        <input
-          className="vocabSearch"
-          type="text"
-          placeholder="Translate a word / phrase"
-          value={vocabInput}
-          onChange={handleChange}
-        />
+      <div className="translation-container">
+        <div className="vocabInput">
+          <input
+            className="vocabSearch"
+            type="text"
+            placeholder="Translate a word / phrase"
+            value={vocabInput}
+            onChange={handleChange}
+          />
 
-        <button className="btn-translate" onClick={handleClick}>
-          Translate!
-        </button>
-        <p className="msg-validation" style={{ opacity: isError ? 1 : 0 }}>
-          {isError && `10 SYMBOLS MAX`}
+          <button className="btn-translate" onClick={handleClick}>
+            Translate!
+          </button>
+          <p className="msg-validation" style={{ opacity: isError ? 1 : 0 }}>
+            {isError && `10 SYMBOLS MAX`}
+          </p>
+        </div>
+
+        <p className="hy-translation">
+          Translation: <span>{vocabTranslate}</span>
         </p>
-      </div>
-      <p className="hy-translation">Translation: {vocabTranslate}</p>
-      {isLoader && <Loader />}
 
-      <div>
-        <h3 className="wordlist-title">Your wordlist:</h3>
-        <ul className="wordlist">
-          {wordlist.map((translationData) => {
-            return (
-              <li key={translationData.word}>
-                {`${translationData.word} - ${translationData.translation}`}
-                <button onClick={() => removeWord(translationData.word)}>
-                  x
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-        <button
-          className="removeWordlist"
-          onClick={removeWordlist}
-          style={{ opacity: wordlist.length >= 1 ? 1 : 0 }}
-        >
-          {wordlist.length >= 1 ? `CLEAR THE LIST` : ``}
-        </button>
+        {isLoader && <Loader />}
+
+        <div className="wordlist-container">
+          <h3 className="wordlist-title">Your wordlist:</h3>
+          <ul className="wordlist-list">
+            {wordlist.map((translationData) => {
+              return (
+                <li key={translationData.word}>
+                  <p>{`${translationData.word} - ${translationData.translation}`}</p>
+                  <button onClick={() => removeWord(translationData.word)}>
+                    x
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          <button
+            className="removeWordlist"
+            onClick={removeWordlist}
+            style={{ opacity: wordlist.length >= 1 ? 1 : 0 }}
+          >
+            {wordlist.length >= 1 ? `CLEAR THE LIST` : ``}
+          </button>
+        </div>
       </div>
       {checkWord && `YOU HAVE THIS WORD ALREADY!`}
     </div>

@@ -14,7 +14,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.translation-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .vocabInput {
@@ -24,16 +31,16 @@
 }
 
 .btn-translate {
-  padding: 5px 10px 5px 10px;
+  padding: 6.5px 10px 6.5px 10px;
   background-color: rgb(245, 221, 244);
   border-radius: 5px;
+  border: none;
 }
 
 .msg-validation {
   margin: 0 10px 0 10px;
   padding: 15px 15px 15px 15px;
   font-size: 20px;
-
   border-radius: 5px;
   color: red;
   background-color: rgb(255, 255, 255);
@@ -41,55 +48,72 @@
 }
 
 .vocabSearch {
-  margin: 10px;
-  padding: 5px;
-  padding-left: 10px;
+  margin: 0 10px 0 0;
+  padding: 6.5px;
+  padding-left: 12px;
   width: 250px;
   outline: none;
+  border-radius: 5px;
+  border: none;
 }
 
 .hy-translation {
-  margin: 10px 0px 20px 0px;
-  padding-left: 2px;
+  margin: 10px 0px 10px 0px;
+
   font-weight: 500;
   font-style: italic;
   font-size: 20px;
   color: rgb(255, 235, 56);
 }
 
+.hy-translation span {
+  font-size: 36px;
+  vertical-align: sub;
+}
+
+.wordlist-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .wordlist-title {
   margin: 10px 0px 20px 0px;
-  padding-left: 2px;
 }
 
-.wordlist {
+.wordlist-list {
   list-style-type: none;
-  margin: 0px 10px 20px 10px;
+  margin: 0px 10px 20px 2px;
   padding: 0;
+  font-size: 18px;
 }
 
-.wordlist li {
+.wordlist-list li {
   font-style: italic;
+  display: flex;
+  justify-content: space-between;
 }
 
-.wordlist button {
+.wordlist-list button {
+  margin-left: 15px;
   border: none;
-  border-radius: 30px;
-  margin: 0px 10px 0px 10px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
   font-size: 14px;
-  padding: 5px;
   background-color: rgb(255, 135, 135);
   color: rgb(0, 0, 0);
+  text-align: center;
 }
 
 .removeWordlist {
   border: none;
   border-radius: 30px;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 5px;
   padding: 5px 10px 5px 10px;
   font-size: 14px;
   background-color: rgb(255, 135, 135);
   color: rgb(0, 0, 0);
+  align-self: flex-end;
 }
 
 /* ul {
