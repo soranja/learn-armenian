@@ -11,10 +11,10 @@ import { settings } from "../../constants/sliderSettings";
 
 function PictureDictionary() {
   const sliderRef = useRef<Slider | null>(null);
-  const sliderElement = sliderRef.current;
 
   useEffect(() => {
-    console.log(sliderRef);
+    const sliderElement = sliderRef.current;
+    sliderElement?.innerSlider?.list?.setAttribute("tabindex", "0");
     sliderElement?.innerSlider?.list?.focus();
 
     // div.slick-list
