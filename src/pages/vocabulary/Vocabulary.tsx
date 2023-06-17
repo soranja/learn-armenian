@@ -10,31 +10,26 @@ function Vocabulary() {
   const [isLoader, setLoader] = useState(false);
   const [isError, setError] = useState(false);
   const [wordlist, setWordlist] = useState<wordlist>([]);
-  const [checkWord, setCheckWord] = useState(false);
+  const [checkSameWord, setCheckSameWord] = useState(false);
 
   const AUTH = process.env.REACT_APP_AUTH;
   const PROJECT = process.env.REACT_APP_PROJECT;
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.value.length === 10) {
+    if (e.target.value.length === 20) {
       setError(true);
       return;
     }
     setError(false);
     setVocabInput(e.target.value);
-
-    // console.log(wordlist.some((word) => word.word === vocabInput));
-    // console.log(checkWordlist());
-    // HERE IT'S FALSE AND DOESN'T WORK ?
-    // problems with understandding event loop / async / ...
   };
 
   const handleClick = () => {
-    if (wordlist.some((word) => word.word === vocabInput) === true) {
-      setCheckWord(true);
+    if (wordlist.some((word) => word.word === vocabInput)) {
+      setCheckSameWord(true);
       return;
     } else {
-      setCheckWord(false);
+      setCheckSameWord(false);
       const translatedVocab = async () => {
         setLoader(true);
         await axios
@@ -157,8 +152,10 @@ function Vocabulary() {
             {wordlist.length >= 1 ? `CLEAR THE LIST` : ``}
           </button>
         </div>
+        <p className="msg-wordlist" style={{ opacity: checkSameWord ? 1 : 0 }}>
+          {checkSameWord && `YOU HAVE THIS WORD ALREADY!`}
+        </p>
       </div>
-      {checkWord && `YOU HAVE THIS WORD ALREADY!`}
     </div>
   );
 }

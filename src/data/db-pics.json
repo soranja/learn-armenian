@@ -1,0 +1,18 @@
+{
+  "pictures": [
+    {
+      "hy": "Բարեւ ձեզ!",
+      "transliteration": "Barev dzez",
+      "en": "Hello!",
+      "ru": "Здравствуйте!",
+      "url": "./pictures/barev-dzez.png"
+    },
+    {
+      "hy": "Բարեւ!",
+      "transliteration": "Barev",
+      "en": "Hi!",
+      "ru": "Привет!",
+      "url": "./pictures/barev.png"
+    }
+  ]
+}

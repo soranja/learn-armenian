@@ -1,32 +1,42 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./PictureDictionary.css";
-// import { picture } from "./pictures/akhper.jpg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./PictureDictionarySlider.css";
+import { picturesData } from "../../data/db-pics";
+import { PicturesData } from "../../types/db-pics";
+import PictureCard from "../../components/pictureCard/PictureCard";
+import { settings } from "../../constants/sliderSettings";
 
 function PictureDictionary() {
+  const sliderRef = useRef<Slider | null>(null);
+  const sliderElement = sliderRef.current;
+
+  useEffect(() => {
+    console.log(sliderRef);
+    sliderElement?.innerSlider?.list?.focus();
+
+    // div.slick-list
+  }, []);
+
   return (
     <div className="PictureDictionary">
-      <div className="card">
-        <img
-          className="card-img-top"
-          src="https://avatars.mds.yandex.net/get-altay/2930751/2a00000172741c545842c7fbd2b29fa3e3c4/XXXL"
-          alt="picture"
-        />
-        <div className="card-body">
-          <h5 className="card-title">PHARMACY - ԴԵՂԱՏՈՒՆ</h5>
-          <p className="card-text">[DEGHATUN]</p>
-        </div>
-      </div>
-      <div className="card">
-        <img
-          className="card-img-top"
-          src="https://risovach.ru/upload/2013/12/mem/ya-tvoi-dom-truba-shatal_38562252_orig_.jpg"
-          // src="./pictures/akhper.jpg" -- HOW TO RUN ON LOCAL???
-          alt="picture"
-        />
-        <div className="card-body">
-          <h5 className="card-title">BRO - ԱԽՊԵՐ</h5>
-          <p className="card-text">[AKHPER]</p>
-        </div>
+      <div>
+        <h3 className="greetings">01 - MEETING & GREETING</h3>
+        <Slider ref={sliderRef} {...settings}>
+          {picturesData.map((picture: PicturesData) => (
+            <PictureCard
+              key={picture.transliteration}
+              hy={picture.hy}
+              transliteration={picture.transliteration}
+              ru={picture.ru}
+              en={picture.en}
+              url={picture.url}
+              category={picture.category}
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );

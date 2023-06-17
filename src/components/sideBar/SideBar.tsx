@@ -10,12 +10,12 @@ function SideBar() {
       <NavLink to="/">
         <Button style={{ marginRight: 10 }}>HOME</Button>
       </NavLink>
-      <NavLink to="/vocabulary">
+      {/* <NavLink to="/vocabulary">
         <Button style={{ marginRight: 10 }}>VOCABULARY</Button>
       </NavLink>
       <NavLink to="/phrasebook">
         <Button style={{ marginRight: 10 }}>PHRASEBOOK</Button>
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/picture-dict">
         <Button style={{ marginRight: 10 }}>PICTURE DICTIONARY</Button>
       </NavLink>
