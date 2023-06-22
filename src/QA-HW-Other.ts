@@ -8,8 +8,8 @@ Questions:
 - how to deploy to a server / online (netlify?)
 - span / div font-size? - SOLVED so far with typography property that only accepts a number
 - how to remove focus animation
-- focus on refresh - very close...
 
+- arrows and dots are not parts of a slider (why)?
 
 */
 

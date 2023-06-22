@@ -57,7 +57,7 @@ export const picturesData = [
   },
   {
     hy: "Մերսի! | Շնորհակալութիւն!",
-    transliteration: "merci / || / shnorhakalootun",
+    transliteration: "merci / || / shnorhakalutun",
     en: "Thank you!",
     ru: "Спасибо!",
     url: "merci.png",

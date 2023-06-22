@@ -38,6 +38,38 @@ function PictureDictionary() {
           ))}
         </Slider>
       </div>
+      <div>
+        <h3 className="numbers">02 - NUMBERS 0-9</h3>
+        <Slider {...settings}>
+          {picturesData.map((picture: PicturesData) => (
+            <PictureCard
+              key={picture.transliteration}
+              hy={picture.hy}
+              transliteration={picture.transliteration}
+              ru={picture.ru}
+              en={picture.en}
+              url={picture.url}
+              category={picture.category}
+            />
+          ))}
+        </Slider>
+      </div>
+      <div>
+        <h3 className="numbers">03 - NUMBERS 10-100</h3>
+        <Slider {...settings}>
+          {picturesData.map((picture: PicturesData) => (
+            <PictureCard
+              key={picture.transliteration}
+              hy={picture.hy}
+              transliteration={picture.transliteration}
+              ru={picture.ru}
+              en={picture.en}
+              url={picture.url}
+              category={picture.category}
+            />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }

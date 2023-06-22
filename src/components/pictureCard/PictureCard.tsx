@@ -41,11 +41,11 @@ function PictureCard({
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Card className="PictureCard" sx={{ height: "380px", width: "400px" }}>
+        <Card className="PictureCard" sx={{ height: "15vw", width: "20vw" }}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="200"
+              height="30%"
               image={require("../../data/pictures/" + category + "/" + url)}
               alt="dictionary picture"
             />

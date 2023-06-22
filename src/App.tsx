@@ -8,10 +8,11 @@ import Vocabulary from "./pages/vocabulary/Vocabulary";
 import Phrasebook from "./pages/phrasebook/Phrasebook";
 import PictureDictionary from "./pages/picture-dictionary/PictureDictionary";
 import SideBar from "./components/sideBar/SideBar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App body-bg text-white">
       <BrowserRouter>
         <SideBar />
         <Routes>
