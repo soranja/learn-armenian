@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px 40px 20px;
+  padding: 0 20px 80px 20px;
   box-sizing: border-box;
 }
 
 .slick-slide {
-  padding: 4em;
+  padding: 5em;
 }
 .slick-slide div {
   display: flex !important;
@@ -36,7 +36,7 @@
 /* dots */
 
 .slick-dots {
-  bottom: 0;
+  bottom: 50px;
 }
 .slick-dots li button:before {
   font-family: "slick";
@@ -60,4 +60,14 @@
 .slick-dots li.slick-active button:before {
   opacity: 0.75;
   color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .slick-slide {
+    padding: 3em;
+  }
+
+  .slick-slider {
+    padding: 0 20px 50px 20px;
+  }
 }

@@ -1,7 +1,6 @@
 export const settings = {
-  className: "center",
+  className: "slider variable-width",
   centerMode: true,
-  centerPadding: "50px",
   dots: true,
   infinite: true,
   focusOnSelect: true,
@@ -9,11 +8,19 @@ export const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
+  // variableWidth: true,
   responsive: [
     {
       breakpoint: 1400,
       settings: {
         slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        dots: false,
       },
     },
   ],

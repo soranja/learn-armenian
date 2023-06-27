@@ -41,11 +41,10 @@ function PictureCard({
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Card className="PictureCard" sx={{ height: "15vw", width: "20vw" }}>
+        <Card className="PictureCard">
           <CardActionArea>
             <CardMedia
               component="img"
-              height="30%"
               image={require("../../data/pictures/" + category + "/" + url)}
               alt="dictionary picture"
             />
@@ -56,18 +55,19 @@ function PictureCard({
               <Typography
                 variant="body2"
                 component="p"
-                marginBottom={1}
-                marginTop={1}
+                marginBottom={"10px"}
+                marginTop={"10px"}
+                // noWrap
               >
                 Transliteration:{" "}
                 <Box component="span" sx={{ fontWeight: 600 }}>
-                  / {transliteration} /
+                  / {transliteration.split(",").join(" / || / ")} /
                 </Box>
               </Typography>
               <Typography
                 variant="body2"
                 component="p"
-                noWrap
+                // noWrap
                 fontStyle="italic"
               >
                 English translation:{" "}
@@ -78,7 +78,7 @@ function PictureCard({
               <Typography
                 variant="body2"
                 component="p"
-                noWrap
+                // noWrap
                 fontStyle="italic"
               >
                 Перевод на русский:{" "}

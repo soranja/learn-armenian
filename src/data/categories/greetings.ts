@@ -1,4 +1,4 @@
-export const picturesData = [
+export const greetingsData = [
   {
     hy: "Բարեւ ձեզ!",
     transliteration: "barev dzez",
@@ -73,9 +73,9 @@ export const picturesData = [
   },
   {
     hy: "Ոնց ես? | Ինչ կա չկա?",
-    transliteration: "onc es? / || / inch ka chka?",
+    transliteration: "onc es?,inch ka chka?",
     en: "How are you? (neutral) / (informal)",
-    ru: "Как дела? (нейтрально) / (неформально)",
+    ru: "Как дела? (нейтр.) / (неоф.)",
     url: "vonts-es.png",
     category: "01-greetings",
   },
