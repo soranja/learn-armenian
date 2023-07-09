@@ -16,11 +16,32 @@
   align-items: center;
 }
 
-.slick-slide:not(.slick-active) {
+/* .slick-slide:not(.slick-active) {
   position: relative;
   z-index: 997;
+  transform: scale(1.2);
+  transition: 0.25s;
 }
 .slick-slide.slick-active:not(.slick-current) {
+  position: relative;
+  z-index: 998;
+  transform: scale(1);
+  transition: 0.25s;
+}
+.slick-slide.slick-active.slick-current {
+  position: relative;
+  z-index: 999;
+  transform: scale(1.2);
+  transition: 0.25s;
+} */
+
+.slick-slide {
+  position: relative;
+  z-index: 997;
+  transform: scale(1);
+  transition: 0.25s;
+}
+.slick-slide.slick-active {
   position: relative;
   z-index: 998;
   transform: scale(1.2);
