@@ -64,10 +64,10 @@
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .slick-slide {
-    padding: 3em;
+    padding: 2.5em;
   }
 
   .slick-slider {
-    padding: 0 20px 50px 20px;
+    padding: 40px 10px 80px 10px;
   }
 }

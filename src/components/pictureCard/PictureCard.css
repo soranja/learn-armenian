@@ -5,17 +5,24 @@
 .PictureCard {
   height: 350px;
   width: 400px;
-  /* border: 5px solid #000; */
 }
 
 .PictureCard img {
-  height: 40%;
+  height: 30%;
+}
+
+.PictureCard :nth-last-child(1) {
+  padding: 0 0 10px 0;
+}
+
+.line-break {
+  display: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .PictureCard {
-    height: 200px;
-    width: 200px;
+    height: 220px;
+    width: 220px;
   }
 
   .PictureCard p {
@@ -29,7 +36,11 @@
   }
 
   .PictureCard img {
-    height: 100px;
-    margin: 0;
+    height: 30%;
+    padding-top: 20px;
+  }
+
+  .line-break {
+    display: block;
   }
 }

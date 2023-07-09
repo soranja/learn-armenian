@@ -1,9 +1,10 @@
 /*
 Questions:
 
-- how to solve: json-server with ts, types and react
-- how to deploy to a server / online (netlify?)
-- span / div font-size? - SOLVED so far with typography property that only accepts a number
+- split.join or replace?
+- how to BREAK the line if it won't fit??? (kinda solved)
+- how to align items to flex start???
+- how to remove the extra spase (the second slide in the bottom) (SOLVED)
 
 */
 
