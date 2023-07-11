@@ -12,18 +12,21 @@ Questions:
 /*
 Homework:
 
-- add breakpoints to slider and cards + stylize
+Optional:
 - make the slider loop smoother (PROB: scale)
+
 
 For public:
 - !!! generate and add at least 5-7 categories (10 max);
 - !!! on mobile, make cards LARGER (x1.5 - 2);
 - !!! change the logo;
-- add loader, fallback images, etc.;
+- add loader, fallback images, etc. (use default MUI);
 - generate and add bg image with stick;
 - turn off Google functionality;
-- change the top bar (Material UI or BY YOURSELF);
+- change the top bar (use default MUI);
 - create the description doc;
+- add categories menu;
+- clean up the code - leave only the nessecary parts;
 
 */
 
