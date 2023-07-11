@@ -27,6 +27,7 @@ For public:
 - create the description doc;
 - add categories menu;
 - clean up the code - leave only the nessecary parts;
+- is it ok to have 01- 02- in the names of pictures?
 
 */
 
