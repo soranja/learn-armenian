@@ -1,0 +1,42 @@
+export const usefulPhrases = [
+  {
+    hy: "...",
+    transliteration: "...",
+    en: "How much is it?",
+    ru: "Сколько стоит?",
+    url: "how-much.png",
+    category: "04-useful-phrases",
+  },
+  {
+    hy: "...",
+    transliteration: "...",
+    en: "Repeat it!",
+    ru: "Повторите!",
+    url: "say-it-again.png",
+    category: "04-useful-phrases",
+  },
+  {
+    hy: "...",
+    transliteration: "...",
+    en: "Say it slower.",
+    ru: "Скажите помедленнее.",
+    url: "say-it-slower.png",
+    category: "04-useful-phrases",
+  },
+  {
+    hy: "...",
+    transliteration: "...",
+    en: "Stop at the next stop.",
+    ru: "На следующей остановите.",
+    url: "stop-at-bus-stop.png",
+    category: "04-useful-phrases",
+  },
+  {
+    hy: "...",
+    transliteration: "...",
+    en: "Where is... (place)?",
+    ru: "Где находится... (место)?",
+    url: "where-is.png",
+    category: "04-useful-phrases",
+  },
+];

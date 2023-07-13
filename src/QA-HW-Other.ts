@@ -1,9 +1,9 @@
 /*
 Questions:
-
-- split.join or replace?
 - how to BREAK the line if it won't fit??? (kinda solved)
+
 - how to align items to flex start???
+- how to leave the position after refresh?
 
 */
 
@@ -18,6 +18,8 @@ Optional:
 
 For public:
 - !!! generate and add at least 5-7 categories (10 max);
+        - add +1 pic to 06, 07 categories
+        - find and check translations and transliterations
 - !!! on mobile, make cards LARGER (x1.5 - 2);
 - !!! change the logo;
 - add loader, fallback images, etc. (use default MUI);
@@ -28,6 +30,7 @@ For public:
 - add categories menu;
 - clean up the code - leave only the nessecary parts;
 - is it ok to have 01- 02- in the names of pictures?
+
 
 */
 
