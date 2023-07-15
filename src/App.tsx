@@ -3,9 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
-import Home from "./pages/home/Home";
-import Vocabulary from "./pages/vocabulary/Vocabulary";
-import Phrasebook from "./pages/phrasebook/Phrasebook";
+import About from "./pages/about/About";
 import PictureDictionary from "./pages/picture-dictionary/PictureDictionary";
 import SideBar from "./components/sideBar/SideBar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,10 +14,8 @@ function App() {
       <BrowserRouter>
         <SideBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/vocabulary" element={<Vocabulary />} />
-          <Route path="/phrasebook" element={<Phrasebook />} />
-          <Route path="/picture-dict" element={<PictureDictionary />} />
+          <Route path="/" element={<PictureDictionary />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>
