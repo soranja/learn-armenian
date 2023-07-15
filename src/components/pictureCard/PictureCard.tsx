@@ -35,45 +35,37 @@ function PictureCard({
             alt="dictionary picture"
           />
           <CardContent>
-            <Typography variant="h5" align="center">
-              {hy.split(",").join(" | ")}
-            </Typography>
-            <Typography
-              variant="body2"
-              component="p"
-              marginBottom={"10px"}
-              marginTop={"10px"}
-            >
-              Transliteration:
-              <br className="line-break" />{" "}
-              <Box component="span" sx={{ fontWeight: 600 }}>
-                / {transliteration.split(",").join(" / || / ")} /
-              </Box>
-            </Typography>
-            <Typography
-              className="translation"
-              variant="body2"
-              component="p"
-              fontStyle="italic"
-            >
-              English translation:
-              <br className="line-break" />{" "}
-              <Box component="span" sx={{ fontWeight: 800 }}>
-                {en.split(",").join(" / ")}
-              </Box>
-            </Typography>
-            <Typography
-              className="translation"
-              variant="body2"
-              component="p"
-              fontStyle="italic"
-            >
-              Перевод на русский:
-              <br className="line-break" />{" "}
-              <Box component="span" sx={{ fontWeight: 800 }}>
-                {ru.split(",").join(" / ")}
-              </Box>
-            </Typography>
+            <Box className="card-content">
+              <Typography variant="h5" align="center">
+                {hy.split("~").join(" | ")}
+              </Typography>
+              <Typography
+                variant="body2"
+                component="p"
+                marginBottom={"10px"}
+                marginTop={"10px"}
+              >
+                Transliteration:
+                <br className="line-break" />{" "}
+                <Box component="span" sx={{ fontWeight: 600 }}>
+                  / {transliteration.split("~").join(" / || / ")} /
+                </Box>
+              </Typography>
+              <Typography variant="body2" component="p" fontStyle="italic">
+                English translation:
+                <br className="line-break" />{" "}
+                <Box component="span" sx={{ fontWeight: 800 }}>
+                  {en.split("~").join(" / ")}
+                </Box>
+              </Typography>
+              <Typography variant="body2" component="p" fontStyle="italic">
+                Перевод на русский:
+                <br className="line-break" />{" "}
+                <Box component="span" sx={{ fontWeight: 800 }}>
+                  {ru.split("~").join(" / ")}
+                </Box>
+              </Typography>
+            </Box>
           </CardContent>
         </CardActionArea>
       </Card>

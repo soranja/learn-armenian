@@ -10,8 +10,8 @@ export const usefulPhrases = [
   {
     hy: "...",
     transliteration: "...",
-    en: "Repeat it!",
-    ru: "Повторите!",
+    en: "Repeat it, please!",
+    ru: "Повторите, пожалуйста!",
     url: "say-it-again.png",
     category: "04-useful-phrases",
   },

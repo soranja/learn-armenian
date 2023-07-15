@@ -40,4 +40,9 @@
   .line-break {
     display: block;
   }
+
+  .card-content {
+    display: flex;
+    align-items: flex-start !important;
+  }
 }

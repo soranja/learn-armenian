@@ -16,6 +16,8 @@ import { greetingsData } from "../../data/categories/greetings";
 import { numbersZeroToNineData } from "../../data/categories/numbersZeroToNine";
 import { numbersLarge } from "../../data/categories/numbersLarge";
 import { usefulPhrases } from "../../data/categories/usefulPhrases";
+import { food } from "../../data/categories/food";
+import { places } from "../../data/categories/places";
 
 function PictureDictionary() {
   const sliderRef = useRef<Slider | null>(null);
@@ -82,6 +84,38 @@ function PictureDictionary() {
         <h3 className="category-title">04 - USEFUL PHRASES</h3>
         <Slider {...settings}>
           {usefulPhrases.map((picture: PicturesData) => (
+            <PictureCard
+              key={picture.transliteration}
+              hy={picture.hy}
+              transliteration={picture.transliteration}
+              ru={picture.ru}
+              en={picture.en}
+              url={picture.url}
+              category={picture.category}
+            />
+          ))}
+        </Slider>
+      </div>
+      <div>
+        <h3 className="category-title">05 - FOOD</h3>
+        <Slider {...settings}>
+          {food.map((picture: PicturesData) => (
+            <PictureCard
+              key={picture.transliteration}
+              hy={picture.hy}
+              transliteration={picture.transliteration}
+              ru={picture.ru}
+              en={picture.en}
+              url={picture.url}
+              category={picture.category}
+            />
+          ))}
+        </Slider>
+      </div>
+      <div>
+        <h3 className="category-title">06 - PLACES</h3>
+        <Slider {...settings}>
+          {places.map((picture: PicturesData) => (
             <PictureCard
               key={picture.transliteration}
               hy={picture.hy}
