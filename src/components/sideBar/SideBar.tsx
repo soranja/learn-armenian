@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function SideBar() {
   return (
-    <div className="p-3 mb-2 bg-warning bg-gradient text-white">
+    <div className="p-3 bg-warning">
       <NavLink to="/">
         <Button style={{ marginRight: 10 }}>HOME</Button>
       </NavLink>

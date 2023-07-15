@@ -45,8 +45,7 @@ function PictureCard({
                 marginBottom={"10px"}
                 marginTop={"10px"}
               >
-                Transliteration:
-                <br className="line-break" />{" "}
+                Transliteration: {/* <br className="line-break" />{" "} */}
                 <Box component="span" sx={{ fontWeight: 600 }}>
                   / {transliteration.split("~").join(" / || / ")} /
                 </Box>
