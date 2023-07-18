@@ -10,29 +10,39 @@ Questions:
 /*
 Homework:
 
-For public:
-- add at least 5-7 categories (pictures DONE);
-        - find and check translations and transliterations
-- !!! on mobile, make cards LARGER (x1.5 - 2);
-- add loader, fallback images, etc. (use default MUI);
-
-- turn off Google functionality;
-
-- change the top bar (use default MUI);
-- create the description doc;
-
-- add categories menu;
-- clean up the code - leave only the nessecary parts;
-
-Optional:
-- CSS white-space insead of br tag?
-- generate and add bg image with stick;
 
 */
 
 // ============================================
 
 /*
+
+Priorities:
+
+!!!:
+- add and check translations and transliterations;
+- change the top bar (use default MUI);
+
+!!:
+- add categories in menu;
+- make cards LARGER (x1.5 - 2) on mobile;
+- clean up the code - leave only the nessecary parts;
+
+!:
+- create the description doc;
+- add loader, fallback images, etc. (use default MUI);
+
+Optional:
+- CSS white-space insead of br tag?;
+- generate and add bg image with stick;
+- keep the scroll position;
+
+*/
+
+// ============================================
+
+/*
+
 Other:
 
 - to learn and practice theory: 
@@ -47,7 +57,7 @@ Code drafts:
 */
 
 /*
-LOG:
+Logs:
 
 */
 

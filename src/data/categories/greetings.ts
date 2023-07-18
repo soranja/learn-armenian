@@ -1,4 +1,4 @@
-export const greetingsData = [
+export const greetings = [
   {
     hy: "Բարեւ ձեզ!",
     transliteration: "barev dzez",

@@ -12,8 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./PictureDictionarySlider.css";
 
 // categories
-import { greetingsData } from "../../data/categories/greetings";
-import { numbersZeroToNineData } from "../../data/categories/numbersZeroToNine";
+import { greetings } from "../../data/categories/greetings";
+import { numbersZeroToNine } from "../../data/categories/numbersZeroToNine";
 import { numbersLarge } from "../../data/categories/numbersLarge";
 import { usefulPhrases } from "../../data/categories/usefulPhrases";
 import { food } from "../../data/categories/food";
@@ -35,7 +35,7 @@ function PictureDictionary() {
       <div>
         <h3 className="category-title">01 - MEETING & GREETING</h3>
         <Slider ref={sliderRef} {...settings}>
-          {greetingsData.map((picture: PicturesData) => (
+          {greetings.map((picture: PicturesData) => (
             <PictureCard
               key={picture.transliteration}
               hy={picture.hy}
@@ -51,7 +51,7 @@ function PictureDictionary() {
       <div>
         <h3 className="category-title">02 - NUMBERS 0-9</h3>
         <Slider {...settings}>
-          {numbersZeroToNineData.map((picture: PicturesData) => (
+          {numbersZeroToNine.map((picture: PicturesData) => (
             <PictureCard
               key={picture.transliteration}
               hy={picture.hy}
