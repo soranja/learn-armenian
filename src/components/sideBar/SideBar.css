@@ -1,0 +1,16 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.pageButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.toPageButton {
+  padding: 0 10px 0 10px;
+}

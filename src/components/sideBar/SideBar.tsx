@@ -1,9 +1,9 @@
 import React from "react";
 import "./SideBar.css";
-import Button from "react-bootstrap/esm/Button";
 
 import { NavLink } from "react-router-dom";
 
+// Material-UI imports
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -58,8 +58,8 @@ function SideBar() {
   }));
 
   return (
-    <div className="p-3 bg-warning">
-      {/* <Box sx={{ flexGrow: 1 }}>
+    <div>
+      <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
             <IconButton
@@ -71,25 +71,30 @@ function SideBar() {
             >
               <MenuIcon />
             </IconButton>
-            <Box component="div" sx={{ flexGrow: 1 }}></Box>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                display: { xs: "none", sm: "block", fontWeight: 400 },
-              }}
-            >
-              PICTURE DICTIONARY
-            </Typography>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                display: { xs: "none", sm: "block", fontWeight: 400 },
-              }}
-            >
-              ABOUT
-            </Typography>
+            <Box className="pageButtons" component="div" sx={{ flexGrow: 1 }}>
+              <Typography
+                className="toPageButton"
+                variant="h6"
+                component="div"
+                sx={{
+                  display: { fontWeight: 400 },
+                }}
+              >
+                <NavLink to="/">PICTURE DICTIONARY</NavLink>
+              </Typography>
+              <Typography
+                className="toPageButton"
+                variant="h6"
+                component="div"
+                sx={{
+                  display: { fontWeight: 400 },
+                }}
+              >
+                <NavLink className="navLink" to="/about">
+                  ABOUT
+                </NavLink>
+              </Typography>
+            </Box>
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -101,13 +106,7 @@ function SideBar() {
             </Search>
           </Toolbar>
         </AppBar>
-      </Box> */}
-      <NavLink to="/">
-        <Button style={{ marginRight: 10 }}>PICTURE DICTIONARY</Button>
-      </NavLink>
-      <NavLink to="/about">
-        <Button style={{ marginRight: 10 }}>ABOUT</Button>
-      </NavLink>
+      </Box>
     </div>
   );
 }
