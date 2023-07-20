@@ -17,7 +17,7 @@ export const places = [
   },
   {
     hy: "Տաք հաց",
-    transliteration: "tak hats",
+    transliteration: "taq hats",
     en: "Bakery shop",
     ru: "Пекарня",
     url: "bakery-shop.png",

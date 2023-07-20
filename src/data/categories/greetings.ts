@@ -72,8 +72,8 @@ export const greetings = [
     category: "01-greetings",
   },
   {
-    hy: "Ոնց ես?~Ինչ կա չկա?",
-    transliteration: "onc es?~inch ka chka?",
+    hy: "Ո՞նց ես~Ի՞նչ կա չկա",
+    transliteration: "vonts es~inch ka chka",
     en: "How are you? (neutral)~(informal)",
     ru: "Как дела? (нейтр.)~(неоф.)",
     url: "vonts-es.png",

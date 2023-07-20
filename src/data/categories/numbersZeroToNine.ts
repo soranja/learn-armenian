@@ -17,7 +17,7 @@ export const numbersZeroToNine = [
   },
   {
     hy: "Երկու",
-    transliteration: "enku",
+    transliteration: "erku",
     en: "Two",
     ru: "Два",
     url: "2.png",
@@ -25,7 +25,7 @@ export const numbersZeroToNine = [
   },
   {
     hy: "Երեք",
-    transliteration: "erek",
+    transliteration: "ereq",
     en: "Three",
     ru: "Три",
     url: "3.png",
