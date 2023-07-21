@@ -1,4 +1,4 @@
-a:link,
+.page-buttons a:link,
 a:visited,
 a:hover,
 a:active {
@@ -6,11 +6,17 @@ a:active {
   color: white;
 }
 
-.pageButtons {
+.page-buttons {
   display: flex;
   flex-direction: row;
 }
 
-.toPageButton {
+.to-page-button {
   padding: 0 10px 0 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .page-buttons {
+    display: none;
+  }
 }

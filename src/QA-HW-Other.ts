@@ -3,6 +3,8 @@ Questions:
 
 - how to leave the position after refresh? (window.scrollX using localStorage, but it's not perfect / sessionStorage ??? --> document.location.reload(true))
 
+- MuiDrawer and SideBar css affect each other!?
+
 */
 
 // ============================================

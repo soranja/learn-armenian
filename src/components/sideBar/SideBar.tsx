@@ -2,17 +2,12 @@ import React from "react";
 import "./SideBar.css";
 
 import { NavLink } from "react-router-dom";
-
 // Material-UI imports
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Typography, InputBase, Toolbar, AppBar } from "@mui/material/";
 import SearchIcon from "@mui/icons-material/Search";
+
+import { MuiDrawer } from "../drawer/MuiDrawer";
 
 function SideBar() {
   const Search = styled("div")(({ theme }) => ({
@@ -62,18 +57,10 @@ function SideBar() {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Box className="pageButtons" component="div" sx={{ flexGrow: 1 }}>
+            <MuiDrawer />
+            <Box className="page-buttons" component="div" sx={{ flexGrow: 1 }}>
               <Typography
-                className="toPageButton"
+                className="to-page-button"
                 variant="h6"
                 component="div"
                 sx={{
@@ -83,7 +70,7 @@ function SideBar() {
                 <NavLink to="/">PICTURE DICTIONARY</NavLink>
               </Typography>
               <Typography
-                className="toPageButton"
+                className="to-page-button"
                 variant="h6"
                 component="div"
                 sx={{
