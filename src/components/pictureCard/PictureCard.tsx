@@ -27,14 +27,14 @@ function PictureCard({
 }) {
   return (
     <div>
-      <Card className="PictureCard">
+      <Card className="picture-card">
         <CardActionArea>
           <CardMedia
             component="img"
             image={require("../../data/pictures/" + category + "/" + url)}
             alt="dictionary picture"
           />
-          <CardContent>
+          <CardContent sx={{ padding: "5px" }}>
             <Box className="card-content">
               <Typography variant="h5" align="center">
                 {hy.split("~").join(" | ")}

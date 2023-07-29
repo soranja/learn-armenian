@@ -23,9 +23,9 @@ function PictureDictionary() {
   }, []);
 
   return (
-    <div className="PictureDictionary">
+    <div className="picture-dictionary">
       {categories.map((slider, index) => (
-        <div key={slider.name}>
+        <div className="slider" key={slider.name}>
           <h3 className="category-title">{slider.name}</h3>
           <Slider ref={!index ? sliderRef : null} {...settings}>
             {slider.category.map((picture: picturesType) => (
