@@ -22,6 +22,7 @@ function PictureDictionary() {
   }, []);
 
   return (
+    // <div className="picture-dictionary-wrapper">
     <div className="picture-dictionary">
       {categories.map((slider, index) => (
         <div className="slider" key={slider.name}>
@@ -42,6 +43,7 @@ function PictureDictionary() {
         </div>
       ))}
     </div>
+    // </div>
   );
 }
 

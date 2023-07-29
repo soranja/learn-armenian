@@ -26,6 +26,7 @@ Priorities:
 
 !!!:
 - change the top bar (use default MUI);
+- don't forget to remove extra slider settings
 
 !!:
 - replace bootstrap.min.css;

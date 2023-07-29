@@ -3,9 +3,9 @@ import "./About.css";
 
 // Components
 
-function Home() {
+function About() {
   return (
-    <div className="Home">
+    <div className="about">
       <div className="welcome" style={{ padding: 10 }}>
         Home
       </div>
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;

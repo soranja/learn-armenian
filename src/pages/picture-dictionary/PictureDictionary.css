@@ -1,9 +1,23 @@
+/* .picture-dictionary-wrapper {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(bg-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+} */
+
 .picture-dictionary {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 40px 20px 0px 20px;
   padding: 0 50px 50px 50px;
+  z-index: 2;
 }
 
 .category-title {
