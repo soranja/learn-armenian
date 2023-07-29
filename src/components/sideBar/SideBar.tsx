@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./SideBar.css";
 import { useLocation } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+
 // Material-UI imports
-import { Box, Toolbar, AppBar, Typography } from "@mui/material/";
+import { Box, Toolbar, AppBar } from "@mui/material/";
 
 // components
 import { MuiDrawer } from "../drawer/MuiDrawer";
@@ -12,18 +12,6 @@ import { NavLinkComponent } from "../navLinkComponent/NavLinkComponent";
 
 function SideBar() {
   const path = useLocation();
-  const mediaMatch = window.matchMedia(
-    "((min-width: 320px) and (max-width: 479px))"
-  );
-  const [matches, setMatches] = useState(mediaMatch.matches);
-  // how does it use itself? or it's different...
-
-  useEffect(() => {
-    const matchHandler = (e: MediaQueryList) => setMatches(e.matches);
-
-    // mediaMatch.addListener(matchHandler);
-    // return () => mediaMatch.removeListener(matchHandler);
-  });
 
   return (
     <div>

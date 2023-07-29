@@ -1,10 +1,9 @@
 import React from "react";
 import "./MuiDrawer.css";
-import { Drawer, Box, IconButton, Typography } from "@mui/material";
+import { Drawer, Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { NavLinkComponent } from "../navLinkComponent/NavLinkComponent";
-import { NavLink } from "react-router-dom";
 
 export const MuiDrawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
