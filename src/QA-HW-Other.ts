@@ -14,6 +14,7 @@ Homework:
 
 - make NavLink component, change CSS with props - STARTED
 - read about Redux (crash course or so)
+- autocomplete CSS styles
 
 */
 
@@ -27,7 +28,7 @@ Priorities:
 - change the top bar (use default MUI);
 
 !!:
-- make cards LARGER (x1.5 - 2) on mobile;
+- replace bootstrap.min.css;
 - clean up the code - leave only the nessecary parts;
 
 !:
@@ -50,16 +51,6 @@ Other:
 - to learn and practice theory: 
         * async code, types and interfaces;
 - review localStorage;
-
-*/
-
-/*
-Code drafts:
-
-*/
-
-/*
-Logs:
 
 */
 

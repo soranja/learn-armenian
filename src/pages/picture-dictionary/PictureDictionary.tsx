@@ -16,7 +16,6 @@ function PictureDictionary() {
   const sliderRef = useRef<Slider | null>(null);
 
   useEffect(() => {
-    console.log(sliderRef.current);
     const sliderElement = sliderRef.current;
     sliderElement?.innerSlider?.list?.setAttribute("tabindex", "0");
     sliderElement?.innerSlider?.list?.focus();
