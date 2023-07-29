@@ -1,22 +1,19 @@
-.page-buttons a:link,
-a:visited,
-a:hover,
-a:active {
+.sidebar-nav-btn {
+  color: #fff;
   text-decoration: none;
-  color: white;
+  padding-right: 10px;
 }
 
 .page-buttons {
   display: flex;
   flex-direction: row;
 }
-
-.to-page-button {
-  padding: 0 10px 0 10px;
-}
-
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .page-buttons {
     display: none;
+  }
+
+  .sidebar-nav-btn {
+    color: #000;
   }
 }

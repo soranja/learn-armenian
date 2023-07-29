@@ -1,9 +1,10 @@
 import React from "react";
 import "./MuiDrawer.css";
-import { NavLink } from "react-router-dom";
-import { Drawer, Box, Typography, IconButton } from "@mui/material";
+import { Drawer, Box, IconButton, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { NavLinkComponent } from "../navLinkComponent/NavLinkComponent";
+import { NavLink } from "react-router-dom";
 
 export const MuiDrawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -24,14 +25,7 @@ export const MuiDrawer = () => {
         onClose={() => setIsDrawerOpen(false)}
       >
         <Box className="drawer-menu" component="div" sx={{ flexGrow: 1 }}>
-          <Typography className="to-page-button" variant="h6" component="div">
-            <NavLink to="/">PICTURE DICTIONARY</NavLink>
-          </Typography>
-          <Typography className="to-page-button" variant="h6" component="div">
-            <NavLink className="navLink" to="/about">
-              ABOUT
-            </NavLink>
-          </Typography>
+          <NavLinkComponent className="sidebar-nav-btn " />
         </Box>
       </Drawer>
     </div>

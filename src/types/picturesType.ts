@@ -1,4 +1,4 @@
-export type PicturesData = {
+export type picturesType = {
   hy: string;
   transliteration: string;
   en: string;
