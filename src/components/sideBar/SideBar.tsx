@@ -15,9 +15,8 @@ function SideBar() {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar className="sidebar" position="static">
         <Toolbar
-          className="sidebar"
           sx={{
             display: "flex",
             flexDirection: "row",

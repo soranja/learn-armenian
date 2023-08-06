@@ -1,3 +1,7 @@
+.sidebar.MuiAppBar-root {
+  background-color: #9b1534;
+}
+
 .sidebar-nav-btn {
   color: #fff;
   text-decoration: none;

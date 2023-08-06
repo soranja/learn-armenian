@@ -1,6 +1,6 @@
 import React from "react";
 import "./CategoriesSearch.css";
-import TextField from "@mui/material/TextField";
+import { InputLabel, TextField } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import { categories } from "../../constants/categories";
 
@@ -11,13 +11,23 @@ export function CategoriesSearch() {
       disablePortal
       id="combo-box-demo"
       options={categories}
-      sx={{ width: 350 }}
       noOptionsText={"No such a category yet ;)"}
       renderInput={(params) => (
         <TextField
-          sx={{ border: "1px solid #fff", borderRadius: "4px" }}
           {...params}
           label="Vocabulary Categories"
+          variant="outlined"
+          sx={{
+            "& .Mui-focused ": {
+              color: "#fff",
+            },
+            "& .Mui-focused input ": {
+              color: "#fff",
+              borderColor: "#fff",
+            },
+          }}
+          // InputLabelProps={{ shrink: true }}
+          focused
         />
       )}
     />

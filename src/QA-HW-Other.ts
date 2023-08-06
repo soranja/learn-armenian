@@ -14,7 +14,7 @@ Homework:
 
 - make NavLink component, change CSS with props - STARTED
 - read about Redux (crash course or so)
-- autocomplete CSS styles
+- autocomplete CSS styles - STARTED
 
 */
 
@@ -26,20 +26,13 @@ Priorities:
 
 !!!:
 - change the top bar (use default MUI);
-- don't forget to remove extra slider settings
 
 !!:
-- replace bootstrap.min.css;
-- clean up the code - leave only the nessecary parts;
+- replace bootstrap.min.css OR leave it? it's hard to make it work.. (proper centered slider + full size window)
 
 !:
-- create the description doc;
+- create the description doc + about page info;
 - add loader, fallback images, etc. (use default MUI);
-
-Optional:
-- CSS white-space insead of br tag?;
-- generate and add bg image with stick;
-- keep the scroll position;
 
 */
 

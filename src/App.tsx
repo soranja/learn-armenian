@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App body-bg text-white">
+    <div className="App">
       <BrowserRouter>
         <SideBar />
         <Routes>
@@ -23,7 +23,3 @@ function App() {
 }
 
 export default App;
-
-// too many import "bootstrap/dist/css/bootstrap.min.css"; OK
-// bg color the whole page ? IS VH-100 OK? FOR NOW OK, percents may be better
-// how to change CSS better: properties or Sass?

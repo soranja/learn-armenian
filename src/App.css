@@ -1,8 +1,10 @@
 html,
-body {
-  min-height: 100%;
-}
-
-.body-bg {
+body,
+.App {
+  color: white;
   background-color: #212529;
+}
+.App {
+  display: flex;
+  flex-direction: column;
 }
