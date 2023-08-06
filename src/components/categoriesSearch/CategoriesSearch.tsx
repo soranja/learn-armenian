@@ -21,13 +21,13 @@ export function CategoriesSearch() {
             "& .Mui-focused ": {
               color: "#fff",
             },
-            "& .Mui-focused input ": {
+            "& .MuiInputLabel-root": {
               color: "#fff",
               borderColor: "#fff",
             },
           }}
           // InputLabelProps={{ shrink: true }}
-          focused
+          // focused
         />
       )}
     />
