@@ -5,9 +5,13 @@ import { ThemeProvider, useTheme } from "@mui/material/styles";
 
 import { categories } from "../../constants/categories";
 import { customTheme } from "../../constants/muiCustomTheme";
+import { categoriesType } from "../../types/categoriesType";
+import { useActions } from "../../hooks/actions";
 
 export function CategoriesSearch() {
   const outerTheme = useTheme();
+
+  const { setSelectLabel } = useActions();
 
   return (
     <ThemeProvider theme={customTheme(outerTheme)}>
@@ -15,6 +19,9 @@ export function CategoriesSearch() {
         className="categories-search"
         options={categories}
         noOptionsText={"No such a category yet ;)"}
+        onChange={(event: any, newValue: categoriesType | null) => {
+          setSelectLabel(newValue?.label || "");
+        }}
         renderInput={(params) => (
           <TextField
             {...params}

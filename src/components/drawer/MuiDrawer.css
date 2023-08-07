@@ -7,6 +7,8 @@
   background-color: rgb(255, 251, 173);
   font-weight: 600;
   text-align: right;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {

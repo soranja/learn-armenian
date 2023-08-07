@@ -11,9 +11,14 @@ import "./PictureDictionary.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./PictureDictionarySlider.css";
+import { useAppSelector } from "../../hooks/selector";
 
 function PictureDictionary() {
   const sliderRef = useRef<Slider | null>(null);
+
+  const { label } = useAppSelector((state) => state.selector);
+
+  console.log(label);
 
   useEffect(() => {
     const sliderElement = sliderRef.current;

@@ -13,7 +13,6 @@ Questions:
 Homework:
 
 - make NavLink component, change CSS with props - STARTED
-- read about Redux (crash course or so)
 - autocomplete CSS styles - STARTED
 
 */
@@ -26,6 +25,7 @@ Priorities:
 
 !!!:
 - change the top bar (use default MUI);
+- fix padding on about
 
 !!:
 - replace bootstrap.min.css OR leave it? it's hard to make it work.. (proper centered slider + full size window)
