@@ -28,7 +28,7 @@ export function CategoriesSearch() {
             label="Vocabulary Categories"
             variant="outlined"
             sx={{
-              "& .Mui-focused, .MuiInputLabel-root": {
+              "& .Mui-focused, .MuiInputLabel-root, .MuiAutocomplete-input": {
                 color: "#fff",
                 borderColor: "#fff",
               },
