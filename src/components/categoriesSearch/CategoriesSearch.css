@@ -1,11 +1,9 @@
 .categories-search {
-  padding: 15px;
   width: 350px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .categories-search {
-    padding: 10px;
     width: 250px;
   }
 }
