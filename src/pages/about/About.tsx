@@ -17,7 +17,7 @@ function About() {
       </p>
       <p className="about-text">
         The futher sections may include: Armenian phonetics theory and
-        exercises, Grammar rules, Vocabulary and grammar exercises...
+        exercises, grammar rules, vocabulary and grammar exercises...
       </p>
     </div>
   );
