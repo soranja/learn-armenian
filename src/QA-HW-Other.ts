@@ -1,10 +1,6 @@
 /*
 Questions:
 
-- how to leave the position after refresh? (window.scrollX using localStorage, but it's not perfect / sessionStorage ??? --> document.location.reload(true))
-
-- to connect sidebar with categories we need redux ()
-
 */
 
 // ============================================
@@ -24,8 +20,8 @@ Homework:
 Priorities:
 
 !!!:
-- change the top bar (use default MUI);
 - fix padding on about
+- fix broken design on mobile
 
 !!:
 - replace bootstrap.min.css OR leave it? it's hard to make it work.. (proper centered slider + full size window)
