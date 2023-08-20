@@ -25,7 +25,7 @@ function SideBar() {
           }}
         >
           <Box className="page-buttons" component="div" sx={{ flexGrow: 1 }}>
-            <NavLinkComponent className="sidebar-nav-btn " />
+            <NavLinkComponent isMobScreen={false} />
           </Box>
           <MuiDrawer />
           {path.pathname === "/" && <CategoriesSearch />}

@@ -2,8 +2,10 @@ import React, { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Typography } from "@mui/material/";
 
-export const NavLinkComponent: FC<{ className: string }> = ({ className }) => (
-  <Box display="flex">
+export const NavLinkComponent: FC<{ isMobScreen: boolean }> = ({
+  isMobScreen,
+}) => (
+  <Box display={isMobScreen ? "block" : "flex"}>
     <Typography
       variant="h6"
       component="div"
@@ -12,7 +14,7 @@ export const NavLinkComponent: FC<{ className: string }> = ({ className }) => (
         color: "white",
       }}
     >
-      <NavLink className={className} to="/">
+      <NavLink className="sidebar-nav-btn" to="/">
         PICTURE DICTIONARY
       </NavLink>
     </Typography>
@@ -23,7 +25,7 @@ export const NavLinkComponent: FC<{ className: string }> = ({ className }) => (
         display: { fontWeight: 400 },
       }}
     >
-      <NavLink className={className} to="/about">
+      <NavLink className="sidebar-nav-btn" to="/about">
         ABOUT
       </NavLink>
     </Typography>

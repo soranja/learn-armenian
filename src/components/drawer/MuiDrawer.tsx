@@ -24,7 +24,7 @@ export const MuiDrawer = () => {
         onClose={() => setIsDrawerOpen(false)}
       >
         <Box className="drawer-menu" component="div" sx={{ flexGrow: 1 }}>
-          <NavLinkComponent className="sidebar-nav-btn " />
+          <NavLinkComponent isMobScreen={true} />
         </Box>
       </Drawer>
     </div>
