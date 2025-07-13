@@ -1,39 +1,39 @@
 import { outlinedInputClasses } from "@mui/material/OutlinedInput";
 import { createTheme, Theme } from "@mui/material/styles";
 
-import { categoriesType } from "../types/";
+import { CategoriesType } from "../types/";
 import { categories } from "../data/categories";
 
-export const categoriesList: categoriesType[] = [
+export const categoriesList: CategoriesType[] = [
   {
-    name: "01 - MEETING & GREETING",
+    name: "MEET & GREET",
     category: categories.greetings,
-    label: "01 - MEETING & GREETING",
+    label: "MEET & GREET",
     id: 1,
   },
   {
-    name: "02 - NUMBERS 0-9",
+    name: "DIGITS",
     category: categories.digits,
-    label: "02 - NUMBERS 0-9",
+    label: "DIGITS",
     id: 2,
   },
   {
-    name: "03 - LARGE NUMBERS",
+    name: "LARGE NUMBERS",
     category: categories.bigNumbers,
-    label: "03 - LARGE NUMBERS",
+    label: "LARGE NUMBERS",
     id: 3,
   },
   {
-    name: "04 - USEFUL PHRASES",
+    name: "USEFUL PHRASES",
     category: categories.usefulPhrases,
-    label: "04 - USEFUL PHRASES",
+    label: "USEFUL PHRASES",
     id: 4,
   },
-  { name: "05 - FOOD", category: categories.food, label: "05 - FOOD", id: 5 },
+  { name: "FOOD", category: categories.food, label: "FOOD", id: 5 },
   {
-    name: "06 - PLACES",
+    name: "PLACES",
     category: categories.places,
-    label: "06 - PLACES",
+    label: "PLACES",
     id: 6,
   },
 ];
@@ -92,7 +92,7 @@ export const sliderSettings = {
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        // slidesToShow: 1,
         dots: false,
       },
     },

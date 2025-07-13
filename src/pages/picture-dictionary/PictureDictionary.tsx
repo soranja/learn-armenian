@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import PictureCard from "../../components/PictureCard";
 import { sliderSettings } from "../../constants";
 import { categoriesList } from "../../constants";
-import { picturesType } from "../../types";
+import { PicturesType } from "../../types";
 import { useAppSelector } from "../../hooks";
 
 // CSS
@@ -45,7 +45,7 @@ export default function PictureDictionary() {
         >
           <h3 className="category-title">{slider.name}</h3>
           <Slider ref={!index ? sliderRef : null} {...sliderSettings}>
-            {slider.category.map((picture: picturesType) => (
+            {slider.category.map((picture: PicturesType) => (
               <PictureCard
                 key={picture.hy}
                 hy={picture.hy}

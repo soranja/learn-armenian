@@ -1,15 +1,17 @@
-import "../styles/CategoriesSearch.css";
-import { TextField, Autocomplete } from "@mui/material";
-import { ThemeProvider, useTheme } from "@mui/material/styles";
+import {
+  TextField,
+  Autocomplete,
+  ThemeProvider,
+  useTheme,
+} from "@mui/material";
 
-import { categoriesList } from "../constants";
-import { muiCustomTheme } from "../constants";
-import { categoriesType } from "../types";
+import { categoriesList, muiCustomTheme } from "../constants";
+import { CategoriesType } from "../types";
 import { useActions } from "../hooks";
+import "../styles/CategoriesSearch.css";
 
 export default function CategoriesSearch() {
   const outerTheme = useTheme();
-
   const { setSelectLabel } = useActions();
 
   return (
@@ -18,21 +20,11 @@ export default function CategoriesSearch() {
         className="categories-search"
         options={categoriesList}
         noOptionsText={"No such a category yet ;)"}
-        onChange={(event: any, newValue: categoriesType | null) => {
+        onChange={(_, newValue: CategoriesType | null) => {
           setSelectLabel(newValue?.label || "");
         }}
         renderInput={(params) => (
-          <TextField
-            {...params}
-            label="Vocabulary Categories"
-            variant="outlined"
-            sx={{
-              "& .Mui-focused, .MuiInputLabel-root, .MuiAutocomplete-input": {
-                color: "#fff",
-                borderColor: "#fff",
-              },
-            }}
-          />
+          <TextField {...params} label="Categories" variant="outlined" />
         )}
       />
     </ThemeProvider>

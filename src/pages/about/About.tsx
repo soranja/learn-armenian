@@ -1,10 +1,14 @@
-import "./About.css";
+import { Box } from "@mui/material";
+import "../../styles/About.css";
 
-// Components
-
-function About() {
+export default function About() {
   return (
-    <div className="about-wrapper">
+    <Box
+      className="about-wrapper"
+      sx={{
+        backgroundImage: `linear-gradient(0deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url("/images/bg/mashtots.webp")`,
+      }}
+    >
       <h2 className="about-title">
         Welcome to my demo project <span>Learn Armenian</span>!
       </h2>
@@ -18,8 +22,6 @@ function About() {
         The futher sections may include: Armenian phonetics theory and
         exercises, grammar rules, vocabulary and grammar exercises...
       </p>
-    </div>
+    </Box>
   );
 }
-
-export default About;

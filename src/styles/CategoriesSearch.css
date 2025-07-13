@@ -8,3 +8,40 @@
     margin-right: 40px;
   }
 }
+
+/* Override input text, label, and focused label color */
+.categories-search .MuiInputBase-input,
+.categories-search .MuiInputLabel-root {
+  color: white;
+}
+
+.categories-search .Mui-focused .MuiInputLabel-root {
+  color: white !important;
+}
+
+/* Outline border color when focused and unfocused */
+.categories-search .MuiOutlinedInput-root {
+  color: white;
+  border-color: white;
+}
+
+.categories-search .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+}
+
+.categories-search
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+}
+
+.categories-search
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+}
+
+/* Make dropdown arrow (icon) white */
+.categories-search .MuiSvgIcon-root {
+  color: white;
+}

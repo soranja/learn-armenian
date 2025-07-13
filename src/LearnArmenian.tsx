@@ -1,23 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { CssBaseline, GlobalStyles } from "@mui/material";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import { CssBaseline, GlobalStyles } from "@mui/material";
 
 // Components
 import About from "./pages/about/About";
 import PictureDictionary from "./pages/picture-dictionary/PictureDictionary";
-import SideBar from "./components/SideBar";
+import Header from "./components/Header";
 
 const globalStyles = (
   <GlobalStyles
-    styles={{
-      html: { backgroundColor: "#222", color: "white" },
-      body: { backgroundColor: "#222", color: "white" },
-      ".App": {
-        display: "flex",
-        flexDirection: "column",
-      },
-    }}
+    styles={{ body: { backgroundColor: "#222", color: "white" } }}
   />
 );
 
@@ -27,7 +20,7 @@ export default function LearnArmenian() {
       <BrowserRouter>
         <CssBaseline />
         {globalStyles}
-        <SideBar />
+        <Header />
         <Routes>
           <Route path="/" element={<PictureDictionary />} />
           <Route path="/about" element={<About />} />

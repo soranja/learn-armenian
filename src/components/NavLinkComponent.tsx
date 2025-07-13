@@ -7,16 +7,21 @@ export default function NavLinkComponent({
   isMobScreen: boolean;
 }) {
   return (
-    <Box display={isMobScreen ? "block" : "flex"}>
+    <Box
+      display={isMobScreen ? "block" : "flex"}
+      sx={{
+        gap: isMobScreen ? 0 : 3,
+      }}
+    >
       <Typography
         variant="h6"
         component="div"
         sx={{
-          display: { fontWeight: 400 },
+          fontWeight: 400,
           color: "white",
         }}
       >
-        <NavLink className="sidebar-nav-btn" to="/">
+        <NavLink className="header-nav-btn" to="/">
           HOME
         </NavLink>
       </Typography>
@@ -27,7 +32,7 @@ export default function NavLinkComponent({
           display: { fontWeight: 400 },
         }}
       >
-        <NavLink className="sidebar-nav-btn" to="/about">
+        <NavLink className="header-nav-btn" to="/about">
           ABOUT
         </NavLink>
       </Typography>

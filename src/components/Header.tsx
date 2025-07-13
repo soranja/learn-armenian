@@ -1,7 +1,4 @@
-import "../styles/SideBar.css";
 import { useLocation } from "react-router-dom";
-
-// Material-UI imports
 import { Box, Toolbar, AppBar } from "@mui/material/";
 
 // Components
@@ -9,12 +6,14 @@ import MuiDrawer from "./Drawer";
 import CategoriesSearch from "./CategoriesSearch";
 import NavLinkComponent from "./NavLinkComponent";
 
-export default function SideBar() {
+import "../styles/Header.css";
+
+export default function Header() {
   const path = useLocation();
 
   return (
     <div>
-      <AppBar className="sidebar" position="static">
+      <AppBar className="header" position="static">
         <Toolbar
           sx={{
             display: "flex",

@@ -6,8 +6,9 @@ import {
   Card,
   Box,
 } from "@mui/material";
+
+import { PicturesType } from "../types/";
 import "../styles/PictureCard.css";
-import { picturesType } from "../types/";
 
 export default function PictureCard({
   hy,
@@ -15,49 +16,33 @@ export default function PictureCard({
   en,
   ru,
   url,
-  category,
-}: picturesType) {
+}: PicturesType) {
   return (
     <Card className="picture-card">
       <CardActionArea>
-        <CardMedia component="img" image={"/images/" + url} alt="dictionary" />
+        <CardMedia
+          component="img"
+          image={"/images/" + url}
+          alt={url.replace(/\.[^/.]+$/, "")}
+        />
         <CardContent className="card-content">
           <Box>
             <Typography variant="h5" align="center">
-              {hy.split("~").join(" | ")}
+              {hy.split("~").join(" / ")}
             </Typography>
 
-            <Typography
-              variant="body2"
-              component="p"
-              className="translation-block"
-            >
-              Transliteration: <br className="line-break" />
-              <span className="transliteration-bold">
-                / {transliteration.split("~").join(" / || / ")} /
-              </span>
+            <Typography variant="body2">
+              / {transliteration.split("~").join(" / || / ")} /
             </Typography>
 
-            <Typography
-              variant="body2"
-              component="p"
-              className="translation-block"
-            >
-              English translation: <br className="line-break" />
-              <span className="translation-bold">
-                {en.split("~").join(" / ")}
-              </span>
+            <Typography variant="body2">
+              <span className="card-bold">Eng:&nbsp;</span>
+              {en.split("~").join(" / ")}
             </Typography>
 
-            <Typography
-              variant="body2"
-              component="p"
-              className="translation-block"
-            >
-              Перевод на русский: <br className="line-break" />
-              <span className="translation-bold">
-                {ru.split("~").join(" / ")}
-              </span>
+            <Typography variant="body2">
+              <span className="card-bold">Рус:&nbsp;</span>
+              {ru.split("~").join(" / ")}
             </Typography>
           </Box>
         </CardContent>

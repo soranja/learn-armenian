@@ -1,15 +1,15 @@
-export type picturesType = {
+export type PicturesType = {
   hy: string;
   transliteration: string;
   en: string;
   ru: string;
   url: string;
-  category: string;
+  category?: string;
 };
 
-export type categoriesType = {
+export type CategoriesType = {
   name: string;
-  category: picturesType[];
+  category: PicturesType[];
   label: string;
   id: number;
 };

@@ -8,8 +8,8 @@
   object-fit: contain;
 }
 
-.line-break {
-  display: none;
+.card-bold {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -26,10 +26,6 @@
   .picture-card img {
     height: 30%;
     padding-top: 5px;
-  }
-
-  .line-break {
-    display: block;
   }
 
   .card-content {

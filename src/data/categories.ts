@@ -5,7 +5,7 @@ const greetings = [
     en: "Hello!",
     ru: "Здравствуйте!",
     url: "greetings/barev-dzez.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
     hy: "Բարեւ!",
@@ -13,7 +13,7 @@ const greetings = [
     en: "Hi!",
     ru: "Привет!",
     url: "greetings/barev.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
     hy: "Բարի լույս!",
@@ -21,7 +21,7 @@ const greetings = [
     en: "Good morning!",
     ru: "Доброе утро!",
     url: "greetings/bari-luis.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
     hy: "Բարի օր!",
@@ -29,7 +29,7 @@ const greetings = [
     en: "Good afternoon!",
     ru: "Добрый день!",
     url: "greetings/bari-or.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
     hy: "Բարի երեկո!",
@@ -37,15 +37,15 @@ const greetings = [
     en: "Good evening!",
     ru: "Добрый вечер!",
     url: "greetings/bari-ereko.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
     hy: "Լավ",
     transliteration: "lav",
-    en: "Good~OK",
+    en: "Good~OK~Well",
     ru: "Хорошо",
     url: "greetings/lav.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
     hy: "Բարի գիշեր",
@@ -53,15 +53,15 @@ const greetings = [
     en: "Have a good night",
     ru: "Спокойной ночи",
     url: "greetings/bari-gisher.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
-    hy: "Մերսի!~Շնորհակալութիւն!",
-    transliteration: "merci~shnorhakalutun",
+    hy: "Շնորհակալութիւն!",
+    transliteration: "shnorhakalutun",
     en: "Thank you!",
     ru: "Спасибо!",
     url: "greetings/merci.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
     hy: "Ցտեսություն!",
@@ -69,15 +69,15 @@ const greetings = [
     en: "Goodbye!",
     ru: "До свидания!",
     url: "greetings/tstesutun.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
   {
-    hy: "Ո՞նց ես~Ի՞նչ կա չկա",
-    transliteration: "vonts es~inch ka chka",
-    en: "How are you? (neutral)~(informal)",
-    ru: "Как дела? (нейтр.)~(неоф.)",
+    hy: "Ո՞նց ես",
+    transliteration: "vonts es",
+    en: "How are you? (neutral)",
+    ru: "Как дела? (нейтр.)",
     url: "greetings/vonts-es.webp",
-    category: "01-greetings",
+    category: "greetings",
   },
 ];
 
@@ -88,7 +88,7 @@ const food = [
     en: "Chicken fillet",
     ru: "Куриное филе",
     url: "food/chicken-fillet.webp",
-    category: "05-food",
+    category: "food",
   },
   {
     hy: "Պաղպաղակ",
@@ -96,7 +96,7 @@ const food = [
     en: "Ice-cream",
     ru: "Мороженое",
     url: "food/ice-cream.webp",
-    category: "05-food",
+    category: "food",
   },
   {
     hy: "Արքայախնձոր",
@@ -104,7 +104,7 @@ const food = [
     en: "Pineapple",
     ru: "Ананас",
     url: "food/pineapple.webp",
-    category: "05-food",
+    category: "food",
   },
   {
     hy: "Գարեջուր",
@@ -112,7 +112,7 @@ const food = [
     en: "Beer",
     ru: "Пиво",
     url: "food/beer.webp",
-    category: "05-food",
+    category: "food",
   },
 ];
 
@@ -123,7 +123,7 @@ const digits = [
     en: "Zero",
     ru: "Ноль",
     url: "digits/0.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Մեկ",
@@ -131,7 +131,7 @@ const digits = [
     en: "One",
     ru: "Один",
     url: "digits/1.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Երկու",
@@ -139,7 +139,7 @@ const digits = [
     en: "Two",
     ru: "Два",
     url: "digits/2.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Երեք",
@@ -147,7 +147,7 @@ const digits = [
     en: "Three",
     ru: "Три",
     url: "digits/3.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Չորս",
@@ -155,7 +155,7 @@ const digits = [
     en: "Four",
     ru: "Четыре",
     url: "digits/4.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Հինգ",
@@ -163,7 +163,7 @@ const digits = [
     en: "Five",
     ru: "Пять",
     url: "digits/5.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Վեց",
@@ -171,7 +171,7 @@ const digits = [
     en: "Six",
     ru: "Шесть",
     url: "digits/6.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Յոթ",
@@ -179,7 +179,7 @@ const digits = [
     en: "Seven",
     ru: "Семь",
     url: "digits/7.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Ութ",
@@ -187,7 +187,7 @@ const digits = [
     en: "Eight",
     ru: "Восемь",
     url: "digits/8.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
   {
     hy: "Ինը",
@@ -195,7 +195,7 @@ const digits = [
     en: "Nine",
     ru: "Девять",
     url: "digits/9.webp",
-    category: "02-numbers-1",
+    category: "digits",
   },
 ];
 
@@ -206,31 +206,31 @@ const bigNumbers = [
     en: "Ten",
     ru: "Десять",
     url: "big_nums/10.webp",
-    category: "03-numbers-2",
+    category: "big-numbers",
   },
-  // {
-  //   hy: "...",
-  //   transliteration: "...",
-  //   en: "Twenty",
-  //   ru: "Двадцать",
-  //   url: "big_nums/20.webp",
-  //   category: "03-numbers-2",
-  // },
-  // {
-  //   hy: "...",
-  //   transliteration: "...",
-  //   en: "Fifty",
-  //   ru: "Пятьдесят",
-  //   url: "big_nums/50.webp",
-  //   category: "03-numbers-2",
-  // },
+  {
+    hy: "Քսան",
+    transliteration: "ksan",
+    en: "Twenty",
+    ru: "Двадцать",
+    url: "big_nums/20.webp",
+    category: "big-numbers",
+  },
+  {
+    hy: "Հիսուն",
+    transliteration: "hisun",
+    en: "Fifty",
+    ru: "Пятьдесят",
+    url: "big_nums/50.webp",
+    category: "big-numbers",
+  },
   {
     hy: "Հարյուր",
     transliteration: "harjur",
     en: "Hundred",
     ru: "Сто",
     url: "big_nums/100.webp",
-    category: "03-numbers-2",
+    category: "big-numbers",
   },
   {
     hy: "Հազար",
@@ -238,7 +238,7 @@ const bigNumbers = [
     en: "Thousand",
     ru: "Тысяча",
     url: "big_nums/1000.webp",
-    category: "03-numbers-2",
+    category: "big-numbers",
   },
   {
     hy: "Միլիոն",
@@ -246,7 +246,7 @@ const bigNumbers = [
     en: "Million",
     ru: "Миллион",
     url: "big_nums/1_000_000.webp",
-    category: "03-numbers-2",
+    category: "big-numbers",
   },
 ];
 
@@ -292,7 +292,7 @@ const usefulPhrases = [
     en: "How much is it?",
     ru: "Сколько стоит?",
     url: "useful_phrases/how-much.webp",
-    category: "04-useful-phrases",
+    category: "useful-phrases",
   },
   {
     hy: "Չէի՞ք կրկնի որ խնդրեմ",
@@ -300,7 +300,7 @@ const usefulPhrases = [
     en: "Could you repeat, please?",
     ru: "Можете повторить, пожалуйста?",
     url: "useful_phrases/say-it-again.webp",
-    category: "04-useful-phrases",
+    category: "useful-phrases",
   },
   {
     hy: "Ավելի դանդաղ կասե՞ս",
@@ -308,7 +308,7 @@ const usefulPhrases = [
     en: "Say it slower.",
     ru: "Скажите помедленнее.",
     url: "useful_phrases/say-it-slower.webp",
-    category: "04-useful-phrases",
+    category: "useful-phrases",
   },
   {
     hy: "կանգառում կանգնեք",
@@ -316,7 +316,7 @@ const usefulPhrases = [
     en: "Stop at the next stop.",
     ru: "На следующей остановите.",
     url: "useful_phrases/stop-at-bus-stop.webp",
-    category: "04-useful-phrases",
+    category: "useful-phrases",
   },
   {
     hy: "Ո՞րտեղ է...",
@@ -324,7 +324,7 @@ const usefulPhrases = [
     en: "Where is... (place)?",
     ru: "Где находится... (место)?",
     url: "useful_phrases/where-is.webp",
-    category: "04-useful-phrases",
+    category: "useful-phrases",
   },
 ];
 
