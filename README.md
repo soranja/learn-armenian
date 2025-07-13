@@ -6,14 +6,10 @@ A revised version of one of my early pet projects:
 - **Refactored** and flattened the codebase for improved readability and performance;
 - **Added** new content and vocabulary;
 
----
-
 ### Original Description
 
 > Welcome to my demo project called **"Learn Armenian"**!  
 > Its main purpose is to teach you some basic Armenian words and phrases with illustrations.
-
----
 
 ### Tech Stack
 
