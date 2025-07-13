@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es6", "dom", "dom.iterable", "esnext"],
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",

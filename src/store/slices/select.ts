@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { SelectInitialState } from "../../types/selectInitialState";
+import { SelectInitialState } from "../../types";
 
 const initialState: SelectInitialState = {
   label: "",
