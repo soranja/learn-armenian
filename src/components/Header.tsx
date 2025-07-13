@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div>
-      <AppBar className="header" position="static">
+      <AppBar position="fixed">
         <Toolbar
           sx={{
             display: "flex",

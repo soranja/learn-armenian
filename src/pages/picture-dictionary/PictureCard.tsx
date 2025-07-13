@@ -7,8 +7,8 @@ import {
   Box,
 } from "@mui/material";
 
-import { PicturesType } from "../types/";
-import "../styles/PictureCard.css";
+import { PicturesType } from "../../types/";
+import "../../styles/PictureCard.css";
 
 export default function PictureCard({
   hy,

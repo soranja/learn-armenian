@@ -50,8 +50,8 @@ const greetings = [
   {
     hy: "Բարի գիշեր",
     transliteration: "bari gisher",
-    en: "Have a good night",
-    ru: "Спокойной ночи",
+    en: "Have a good night!",
+    ru: "Спокойной ночи!",
     url: "greetings/bari-gisher.webp",
     category: "greetings",
   },
@@ -74,8 +74,8 @@ const greetings = [
   {
     hy: "Ո՞նց ես",
     transliteration: "vonts es",
-    en: "How are you? (neutral)",
-    ru: "Как дела? (нейтр.)",
+    en: "How are you?",
+    ru: "Как дела?",
     url: "greetings/vonts-es.webp",
     category: "greetings",
   },

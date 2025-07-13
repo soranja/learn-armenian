@@ -1,16 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 
-import PictureCard from "../../components/PictureCard";
+import PictureCard from "./PictureCard";
+import PictureDictionaryOverlay from "./PictureDictionaryOverlay";
 import { sliderSettings } from "../../constants";
 import { categoriesList } from "../../constants";
 import { PicturesType } from "../../types";
 import { useAppSelector } from "../../hooks";
 
 // CSS
-import "../../styles/PictureDictionary.css";
+import { Box, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../../styles/PictureDictionary.css";
 
 export default function PictureDictionary() {
   const sliderRef = useRef<Slider | null>(null);
@@ -35,31 +37,44 @@ export default function PictureDictionary() {
   }, []);
 
   return (
-    // <div className="picture-dictionary-wrapper">
-    <div className="picture-dictionary">
-      {categoriesList.map((slider, index) => (
-        <div
-          className="slider"
-          key={slider.name}
-          ref={slider.name === label ? scrollRef : null}
-        >
-          <h3 className="category-title">{slider.name}</h3>
-          <Slider ref={!index ? sliderRef : null} {...sliderSettings}>
-            {slider.category.map((picture: PicturesType) => (
-              <PictureCard
-                key={picture.hy}
-                hy={picture.hy}
-                transliteration={picture.transliteration}
-                ru={picture.ru}
-                en={picture.en}
-                url={picture.url}
-                category={picture.category}
-              />
-            ))}
-          </Slider>
-        </div>
-      ))}
-    </div>
-    // </div>
+    <Box sx={{ position: "relative" }}>
+      <PictureDictionaryOverlay />
+      <Box className="picture-dictionary">
+        {categoriesList.map((slider, index) => (
+          <Box
+            className="slider"
+            key={slider.name}
+            ref={slider.name === label ? scrollRef : null}
+          >
+            <Typography
+              variant="h3"
+              component="h3"
+              className="category-title"
+              sx={{
+                fontSize: { xs: 24, sm: 36 },
+                mb: { xs: 2, sm: 6 },
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+            >
+              {slider.name}
+            </Typography>
+            <Slider ref={!index ? sliderRef : null} {...sliderSettings}>
+              {slider.category.map((picture: PicturesType) => (
+                <PictureCard
+                  key={picture.hy}
+                  hy={picture.hy}
+                  transliteration={picture.transliteration}
+                  ru={picture.ru}
+                  en={picture.en}
+                  url={picture.url}
+                  category={picture.category}
+                />
+              ))}
+            </Slider>
+          </Box>
+        ))}
+      </Box>
+    </Box>
   );
 }

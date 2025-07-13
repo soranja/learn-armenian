@@ -1,5 +1,4 @@
-import { outlinedInputClasses } from "@mui/material/OutlinedInput";
-import { createTheme, Theme } from "@mui/material/styles";
+import { outlinedInputClasses, createTheme, Theme } from "@mui/material";
 
 import { CategoriesType } from "../types/";
 import { categories } from "../data/categories";
@@ -44,30 +43,53 @@ export const muiCustomTheme = (outerTheme: Theme) =>
       mode: outerTheme.palette.mode,
     },
     components: {
+      MuiAppBar: {
+        styleOverrides: {
+          root: {
+            backgroundColor: "#9b1534",
+            paddingTop: "15px",
+            paddingBottom: "15px",
+          },
+        },
+      },
       MuiTextField: {
         styleOverrides: {
           root: {
             "--TextField-brandBorderColor": "#FFF",
             "--TextField-brandBorderHoverColor": "#FFF",
             "--TextField-brandBorderFocusedColor": "#FFF",
+            "& .MuiInputLabel-root": {
+              color: "#FFF",
+            },
             "& label.Mui-focused": {
               color: "var(--TextField-brandBorderFocusedColor)",
+            },
+            "& .MuiInputBase-input": {
+              color: "#FFF",
             },
           },
         },
       },
       MuiOutlinedInput: {
         styleOverrides: {
-          notchedOutline: {
-            borderColor: "var(--TextField-brandBorderColor)",
-          },
           root: {
+            color: "#FFF",
             [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
               borderColor: "var(--TextField-brandBorderHoverColor)",
             },
             [`&.Mui-focused .${outlinedInputClasses.notchedOutline}`]: {
               borderColor: "var(--TextField-brandBorderFocusedColor)",
             },
+          },
+          notchedOutline: {
+            borderColor: "var(--TextField-brandBorderColor)",
+          },
+        },
+      },
+      MuiSvgIcon: {
+        styleOverrides: {
+          root: {
+            color: "#FFF",
           },
         },
       },

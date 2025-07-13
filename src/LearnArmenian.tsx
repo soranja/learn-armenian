@@ -1,12 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { CssBaseline, GlobalStyles } from "@mui/material";
+import {
+  CssBaseline,
+  GlobalStyles,
+  Toolbar,
+  ThemeProvider,
+  useTheme,
+} from "@mui/material";
 
 // Components
 import About from "./pages/about/About";
 import PictureDictionary from "./pages/picture-dictionary/PictureDictionary";
 import Header from "./components/Header";
+import { muiCustomTheme } from "./constants";
 
 const globalStyles = (
   <GlobalStyles
@@ -15,17 +22,23 @@ const globalStyles = (
 );
 
 export default function LearnArmenian() {
+  const outerTheme = useTheme();
+  const theme = muiCustomTheme(outerTheme);
+
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <CssBaseline />
-        {globalStyles}
-        <Header />
-        <Routes>
-          <Route path="/" element={<PictureDictionary />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </BrowserRouter>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <BrowserRouter>
+          <CssBaseline />
+          {globalStyles}
+          <Header />
+          <Toolbar />
+          <Routes>
+            <Route path="/" element={<PictureDictionary />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </ThemeProvider>
   );
 }

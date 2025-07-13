@@ -1,16 +1,9 @@
-/* .picture-dictionary-wrapper {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0;
-} */
-
 .picture-dictionary {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin: 10px 20px 0px 20px;
-  padding: 0 50px 0 50px;
+  margin: 50px 20px;
+  padding: 0 50px;
   z-index: 2;
 }
 
@@ -22,6 +15,75 @@
   margin: 0 0 60px 0;
   font-size: 36px;
   text-align: center;
+}
+
+.slick-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 80px 20px;
+  box-sizing: border-box;
+}
+
+.slick-slide {
+  padding: 5em;
+}
+
+.slick-slide div {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide {
+  position: relative;
+  z-index: 997;
+  transform: scale(1);
+  transition: 0.25s;
+}
+
+.slick-slide.slick-active {
+  position: relative;
+  z-index: 998;
+  transform: scale(1.2);
+  transition: 0.25s;
+}
+
+.slick-slide.slick-active.slick-current {
+  position: relative;
+  z-index: 999;
+  transform: scale(1.4);
+  transition: 0.25s;
+}
+
+/* dots */
+.picture-dictionary .slick-dots {
+  bottom: 50px;
+}
+
+.picture-dictionary .slick-dots li button:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 800;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: "Է";
+
+  opacity: 0.25;
+  color: rgb(255, 255, 255);
+}
+
+.picture-dictionary .slick-dots li.slick-active button:before {
+  opacity: 0.85;
+  color: rgb(255, 255, 255);
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
@@ -39,43 +101,6 @@
   }
 }
 
-.slick-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px 80px 20px;
-  box-sizing: border-box;
-}
-
-.slick-slide {
-  padding: 5em;
-}
-.slick-slide div {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.slick-slide {
-  position: relative;
-  z-index: 997;
-  transform: scale(1);
-  transition: 0.25s;
-}
-.slick-slide.slick-active {
-  position: relative;
-  z-index: 998;
-  transform: scale(1.2);
-  transition: 0.25s;
-}
-.slick-slide.slick-active.slick-current {
-  position: relative;
-  z-index: 999;
-  transform: scale(1.4);
-  transition: 0.25s;
-}
-
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .slick-slide {
     padding: 2.5em;
@@ -84,33 +109,4 @@
     padding: 40px 10px 80px 10px;
     width: 300px;
   }
-}
-
-/* dots */
-
-.slick-dots {
-  bottom: 50px;
-}
-.slick-dots li button:before {
-  font-family: "slick";
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 800;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 20px;
-  height: 20px;
-
-  content: "Է";
-  text-align: center;
-
-  opacity: 0.25;
-  color: rgb(255, 255, 255);
-}
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: rgb(255, 255, 255);
 }
