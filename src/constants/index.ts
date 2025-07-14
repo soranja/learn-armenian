@@ -5,35 +5,25 @@ import { categories } from "../data/categories";
 
 export const categoriesList: CategoriesType[] = [
   {
-    name: "MEET & GREET",
     category: categories.greetings,
     label: "MEET & GREET",
-    id: 1,
   },
   {
-    name: "DIGITS",
     category: categories.digits,
     label: "DIGITS",
-    id: 2,
   },
   {
-    name: "LARGE NUMBERS",
     category: categories.bigNumbers,
     label: "LARGE NUMBERS",
-    id: 3,
   },
   {
-    name: "USEFUL PHRASES",
     category: categories.usefulPhrases,
     label: "USEFUL PHRASES",
-    id: 4,
   },
-  { name: "FOOD", category: categories.food, label: "FOOD", id: 5 },
+  { category: categories.food, label: "FOOD" },
   {
-    name: "PLACES",
     category: categories.places,
     label: "PLACES",
-    id: 6,
   },
 ];
 

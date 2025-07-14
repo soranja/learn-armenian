@@ -16,6 +16,7 @@ export default function PictureCard({
   en,
   ru,
   url,
+  category,
 }: PicturesType) {
   return (
     <Card className="picture-card">
@@ -23,7 +24,7 @@ export default function PictureCard({
         <CardMedia
           component="img"
           image={"/images/" + url}
-          alt={url.replace(/\.[^/.]+$/, "")}
+          alt={category + ", " + url.replace(/\.[^/.]+$/, "")}
         />
         <CardContent className="card-content">
           <Box>

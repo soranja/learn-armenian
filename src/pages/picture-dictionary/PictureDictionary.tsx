@@ -43,8 +43,8 @@ export default function PictureDictionary() {
         {categoriesList.map((slider, index) => (
           <Box
             className="slider"
-            key={slider.name}
-            ref={slider.name === label ? scrollRef : null}
+            key={slider.label}
+            ref={slider.label === label ? scrollRef : null}
           >
             <Typography
               variant="h3"
@@ -57,7 +57,7 @@ export default function PictureDictionary() {
                 fontWeight: "bold",
               }}
             >
-              {slider.name}
+              {slider.label}
             </Typography>
             <Slider ref={!index ? sliderRef : null} {...sliderSettings}>
               {slider.category.map((picture: PicturesType) => (

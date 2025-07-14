@@ -8,10 +8,8 @@ export type PicturesType = {
 };
 
 export type CategoriesType = {
-  name: string;
   category: PicturesType[];
   label: string;
-  id: number;
 };
 
 export type SelectInitialState = { label: string };

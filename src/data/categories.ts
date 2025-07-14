@@ -326,6 +326,30 @@ const usefulPhrases = [
     url: "useful_phrases/where-is.webp",
     category: "useful-phrases",
   },
+  {
+    hy: "Իջնում եք",
+    transliteration: "iʒˈnum ɛkʰ",
+    en: " Are you getting off?",
+    ru: "Вы выходите?",
+    url: "useful_phrases/ijnum-ek.webp",
+    category: "useful-phrases",
+  },
+  {
+    hy: "Մեկ տոմս խնդրում եմ",
+    transliteration: "mɛk tɔms χəntˈɾum ɛm",
+    en: "One ticket, please",
+    ru: "Один билет, пожалуйста",
+    url: "useful_phrases/metro.webp",
+    category: "useful-phrases",
+  },
+  {
+    hy: "Մի կիլո կտա՞ք",
+    transliteration: "mi kiˈlɔ kəˈtɑkʰ",
+    en: "Can you give (me) a kilo?",
+    ru: "Дайте мне килограмм",
+    url: "useful_phrases/mek-kilo.webp",
+    category: "useful-phrases",
+  },
 ];
 
 export const categories = {

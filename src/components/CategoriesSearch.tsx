@@ -1,12 +1,11 @@
 import {
   TextField,
   Autocomplete,
-  ThemeProvider,
   useTheme,
   useMediaQuery,
   SxProps,
 } from "@mui/material";
-import { categoriesList, muiCustomTheme } from "../constants";
+import { categoriesList } from "../constants";
 import { CategoriesType } from "../types";
 import { useActions } from "../hooks";
 
@@ -21,16 +20,14 @@ export default function CategoriesSearch() {
   };
 
   return (
-    <ThemeProvider theme={muiCustomTheme(theme)}>
-      <Autocomplete
-        sx={sxStyles}
-        options={categoriesList}
-        noOptionsText="No such a category yet ;)"
-        onChange={(_, newValue: CategoriesType | null) => {
-          setSelectLabel(newValue?.label || "");
-        }}
-        renderInput={(params) => <TextField {...params} label="Categories" />}
-      />
-    </ThemeProvider>
+    <Autocomplete
+      sx={sxStyles}
+      options={categoriesList}
+      noOptionsText="No such a category yet ;)"
+      onChange={(_, newValue: CategoriesType | null) => {
+        setSelectLabel(newValue?.label || "");
+      }}
+      renderInput={(params) => <TextField {...params} label="Categories" />}
+    />
   );
 }

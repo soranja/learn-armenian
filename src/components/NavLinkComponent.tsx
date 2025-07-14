@@ -13,25 +13,12 @@ export default function NavLinkComponent({
         gap: isMobScreen ? 0 : 3,
       }}
     >
-      <Typography
-        variant="h6"
-        component="div"
-        sx={{
-          fontWeight: 400,
-          color: "white",
-        }}
-      >
+      <Typography variant="h6" component="div">
         <NavLink className="header-nav-btn" to="/">
           HOME
         </NavLink>
       </Typography>
-      <Typography
-        variant="h6"
-        component="div"
-        sx={{
-          display: { fontWeight: 400 },
-        }}
-      >
+      <Typography variant="h6" component="div">
         <NavLink className="header-nav-btn" to="/about">
           ABOUT
         </NavLink>
