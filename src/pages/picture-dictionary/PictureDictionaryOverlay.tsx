@@ -16,6 +16,7 @@ export default function PictureDictionaryOverlay() {
     >
       {/* Background image */}
       <Box
+        className="picture-dictionary-bg"
         sx={{
           position: "absolute",
           top: 0,
