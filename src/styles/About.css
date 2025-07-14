@@ -1,9 +1,10 @@
 .about-wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: auto;
+  height: 93vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,14 +15,14 @@
 .about-title {
   font-size: 28px;
   padding: 0 0 20px 0;
-  width: 20%;
+
   text-align: center;
   line-height: 40px;
 }
 
 .about-title span {
   font-style: italic;
-  color: antiquewhite;
+  color: #eaff00ff;
   font-size: 32px;
 }
 
@@ -29,6 +30,11 @@
   width: 40%;
   text-align: justify;
   font-size: 20px;
+}
+
+.about-text a {
+  text-decoration: none;
+  color: #eaff00ff;
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {

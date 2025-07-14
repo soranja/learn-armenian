@@ -10,17 +10,14 @@ export default function About() {
       }}
     >
       <h2 className="about-title">
-        Welcome to my demo project <span>Learn Armenian</span>!
+        Welcome to one of my early projects: <span>Learn Armenian</span>.
       </h2>
       <p className="about-text">
-        It is an educational app, and the main goal is quite straight: teach you
-        some Armenian! So far the demo consists of one section, Picture
-        Dictionary, where you can find some useful words and phrases with
-        explanatory illustrations.
-      </p>
-      <p className="about-text">
-        The futher sections may include: Armenian phonetics theory and
-        exercises, grammar rules, vocabulary and grammar exercises...
+        This is an educational website with a simple goal: to help you learn
+        some Armenian! The current demo features a Picture Dictionary (on
+        the&nbsp;
+        <a href="/">Home</a> page), where you can explore useful words and
+        phrases accompanied by explanatory illustrations.
       </p>
     </Box>
   );
