@@ -101,12 +101,18 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 479px) {
-  .slick-slide {
-    padding: 2.5em;
+@media screen and (max-width: 480px) {
+  .slick-slide.slick-active,
+  .slick-slide.slick-active.slick-current {
+    transform: scale(1) !important;
   }
+
+  .slick-slide {
+    padding: 0 10px;
+  }
+
   .slick-slider {
-    padding: 40px 10px 80px 10px;
-    width: 300px;
+    width: 100%;
+    padding: 0 5px 40px 5px;
   }
 }

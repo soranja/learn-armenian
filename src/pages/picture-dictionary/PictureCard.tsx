@@ -27,9 +27,7 @@ export default function PictureCard({
         />
         <CardContent className="card-content">
           <Box>
-            <Typography variant="h5" align="center">
-              {hy.split("~").join(" / ")}
-            </Typography>
+            <Typography variant="h5">{hy.split("~").join(" / ")}</Typography>
 
             <Typography variant="body2">
               / {transliteration.split("~").join(" / || / ")} /
