@@ -13,6 +13,7 @@ import {
 import About from "./pages/about/About";
 import PictureDictionary from "./pages/picture-dictionary/PictureDictionary";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { muiCustomTheme } from "./constants";
 
 const globalStyles = (
@@ -37,6 +38,7 @@ export default function LearnArmenian() {
             <Route path="/" element={<PictureDictionary />} />
             <Route path="/about" element={<About />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </Provider>
     </ThemeProvider>
